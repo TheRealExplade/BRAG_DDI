@@ -1,0 +1,38 @@
+# --- CYP3A4 INTERACTIONS ---
+Ketoconazole inhibits CYP3A4 enzyme.
+Simvastatin is metabolized by CYP3A4.
+Combining CYP3A4 inhibitors with simvastatin increases risk of toxicity.
+High levels of simvastatin can cause rhabdomyolysis.
+
+Clarithromycin is a strong CYP3A4 inhibitor.
+Atorvastatin is metabolized by CYP3A4.
+Combining clarithromycin with atorvastatin increases risk of muscle toxicity.
+
+# --- ANTICOAGULANT INTERACTIONS ---
+Warfarin is an anticoagulant that inhibits vitamin K-dependent clotting factors.
+Aspirin inhibits platelet aggregation.
+Combining warfarin and aspirin increases risk of bleeding.
+Concurrent use may increase INR and bleeding complications.
+
+Warfarin is metabolized by CYP2C9 enzyme.
+Drugs that inhibit CYP2C9 can increase warfarin levels.
+
+# --- NSAID INTERACTIONS ---
+Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID).
+NSAIDs can increase risk of gastrointestinal bleeding.
+Combining NSAIDs with anticoagulants increases bleeding risk.
+
+# --- ACE INHIBITOR INTERACTIONS ---
+Lisinopril is an ACE inhibitor.
+ACE inhibitors can increase potassium levels.
+Combining ACE inhibitors with potassium supplements may cause hyperkalemia.
+
+# --- ANTIBIOTIC INTERACTIONS ---
+Metronidazole inhibits CYP2C9.
+Metronidazole increases warfarin levels.
+Combining metronidazole with warfarin increases bleeding risk.
+
+# --- DIABETES DRUG INTERACTIONS ---
+Metformin is used to treat type 2 diabetes.
+Metformin is cleared renally.
+Combining metformin with contrast agents may increase risk of lactic acidosis.
