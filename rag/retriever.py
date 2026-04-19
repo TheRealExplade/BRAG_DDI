@@ -1,5 +1,5 @@
 from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 def get_retriever():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
@@ -9,4 +9,4 @@ def get_retriever():
         embedding_function=embeddings
     )
 
-    return db.as_retriever(search_kwargs={"k": 2})
+    return db

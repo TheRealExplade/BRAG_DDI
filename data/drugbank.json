@@ -1,0 +1,20 @@
+[
+  {
+    "drug1": "warfarin",
+    "drug2": "aspirin",
+    "interaction": "Increased bleeding risk",
+    "mechanism": "Anticoagulant + antiplatelet effect",
+    "enzymes": ["CYP2C9"],
+    "targets": ["clotting_factors", "platelets"],
+    "effects": ["bleeding"]
+  },
+  {
+    "drug1": "ketoconazole",
+    "drug2": "simvastatin",
+    "interaction": "Increased statin toxicity",
+    "mechanism": "CYP3A4 inhibition",
+    "enzymes": ["CYP3A4"],
+    "targets": ["liver"],
+    "effects": ["rhabdomyolysis"]
+  }
+]

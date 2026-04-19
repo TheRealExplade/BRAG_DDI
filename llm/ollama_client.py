@@ -1,5 +1,3 @@
-# llm/ollama_client.py
-
 import requests
 from llm.interface import LLMInterface
 
@@ -17,5 +15,5 @@ class OllamaLLM(LLMInterface):
                 "stream": False
             }
         )
-
+        
         return response.json()["response"]

@@ -1,4 +1,5 @@
 def format_for_pharmacist(data, patient_context):
+    monitoring = data["recommendation"].get("monitoring", ["Not specified"])
     return f"""
 🔹 DRUG INTERACTION REPORT
 
@@ -21,7 +22,7 @@ Clinical Risks:
 
 Recommendation:
 - Action: {data["recommendation"]["action"]}
-- Monitoring: {", ".join(data["recommendation"]["monitoring"])}
+- Monitoring: {", ".join(monitoring)}
 - Alternative: {", ".join(data["recommendation"]["alternatives"])}
 
 Patient Context:
@@ -32,7 +33,10 @@ Patient Context:
 Evidence:
 {"".join([f"{i+1}. {e}\n" for i, e in enumerate(data["evidence"])] )}
 
+Graph Evidence:
+{data.get("graph_evidence", "N/A")}
+
 AI Confidence:
-- {data["confidence_level"]}
-- Reason: {data["confidence_reason"]}
+- {data.get("confidence_score", "N/A")}
+- Reason: {data.get("confidence_reason", "Not specified")}
 """

@@ -8,6 +8,11 @@ from pipeline.output_formatter import format_output
 from pipeline.clinical_formatter import format_for_pharmacist
 from pipeline.output_formatter import format_output
 from rag.reranker import rerank
+from rag.graph import build_graph, query_graph
+
+G = build_graph()
+
+
 
 def run_pipeline(drug1, drug2):
     ddi = get_ddi(drug1, drug2)
@@ -15,7 +20,14 @@ def run_pipeline(drug1, drug2):
     retriever = get_retriever()
     query = f"{drug1} {drug2} interaction clinical risk bleeding mechanism"
 
-    docs = retriever.invoke(query)
+    graph_context = query_graph(G, drug1, drug2)
+    #graph_context = "\n".join(graph_context.split("\n")[:2])
+
+
+    print("\n--- GRAPH CONTEXT ---")
+    print(graph_context)
+
+    docs = retriever.similarity_search(query, k=5)
 
     seen = set()
     unique_docs = []
@@ -32,7 +44,7 @@ def run_pipeline(drug1, drug2):
     filtered_docs = [
         d for d in docs
         if drug1.lower() in d.page_content.lower()
-        or drug2.lower() in d.page_content.lower()
+        and drug2.lower() in d.page_content.lower()
     ]
 
     if not filtered_docs:
@@ -45,47 +57,61 @@ def run_pipeline(drug1, drug2):
     for d in docs:
         print(d.page_content)
 
+    #MAX_DOCS = 3
+    #docs = docs[:MAX_DOCS]
+
     context = "\n".join([doc.page_content for doc in docs])
 
-    prompt = build_prompt(ddi, context)
+    combined_context = f"""
+    VECTOR CONTEXT:
+    {context}
+
+    GRAPH CONTEXT:
+    {graph_context}
+    """
+
+    prompt = build_prompt(ddi, combined_context)
 
     llm = OllamaLLM()
-    raw_output = llm.generate(prompt)
-
-    structured_output = format_output(raw_output, context)
-    structured_output["confidence"] = min(len(docs) / 2, 1.0)
-    structured_output = {
-        # Core identity
+    try:
+        raw_output = llm.generate(prompt)
+    except Exception as e:
+        print("LLM ERROR:", e)
+        return {
+            "error": "LLM_FAILURE",
+            "reason": str(e)
+    }
+    print("----------------RAW OUTPUT----------------")
+    print(raw_output)
+    raw_structured = format_output(raw_output, combined_context)
+    print("----------------RAW STRUCTURE----------------")
+    print(raw_structured)
+    final_output = {
         "drug_pair": [drug1, drug2],
 
-        # Clinical fields (mapped properly)
-        "clinical_severity": structured_output.get("risk", "UNKNOWN"),
-        "confidence_score": structured_output.get("confidence", 0.5),
+        "clinical_severity": raw_structured.get("risk", "UNKNOWN"),
 
-        "interaction_summary": structured_output.get("explanation", ""),
-        "mechanism_of_interaction": structured_output.get("mechanism", "Not available"),
+        "confidence_score": raw_structured.get("confidence", 0.5),
+        "confidence_reason": raw_structured.get("confidence_reason", ""),
 
-        "clinical_effects": [structured_output.get("risk", "")],
+        "interaction_summary": raw_structured.get("explanation", ""),
+        "mechanism_of_interaction": raw_structured.get("mechanism", "Not available"),
 
+        "clinical_effects": [raw_structured.get("risk", "")],
         "recommendation": {
-            "action": structured_output.get("recommendation", ""),
-            "monitoring": ["Monitor patient"],
-            "alternatives": ["Consult specialist"]
+            "action": raw_structured.get("recommendation", ""),
+            "alternatives": raw_structured.get("alternatives", [])
         },
 
-        "evidence": structured_output.get("evidence", []),
+        "evidence": raw_structured.get("evidence", []),
 
-        "confidence_level": "Medium",
-        "confidence_reason": "Based on available retrieved evidence"
-    }
-    patient_context = {
-        "age": 65,
-        "conditions": ["Hypertension"],
-        "medications": ["Aspirin"]
+        "graph_evidence": graph_context
     }
 
-    return structured_output
+    print("----------------FINAL OUTPUT----------------")
+    print(final_output)
 
+    return final_output
 
 if __name__ == "__main__":
     result = run_pipeline("warfarin", "aspirin")
@@ -98,7 +124,6 @@ if __name__ == "__main__":
 
     from pipeline.clinical_formatter import format_for_pharmacist
     report = format_for_pharmacist(result, patient_context)
-
     print(report)
 
     # 👇 STEP 4 — DEFINE FEEDBACK (manual testing)
@@ -113,4 +138,4 @@ if __name__ == "__main__":
 
     # 👇 STEP 5 — SAVE FEEDBACK
     from pipeline.feedback import save_feedback
-    save_feedback(result, feedback)
+    #save_feedback(result, feedback)
