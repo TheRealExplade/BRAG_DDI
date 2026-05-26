@@ -1,0 +1,34 @@
+[
+  {
+    "id": "262e11e2-b357-417c-91a4-a2add8842295",
+    "llm_output": {
+      "drug_pair": [
+        "warfarin",
+        "aspirin"
+      ],
+      "clinical_severity": "HIGH",
+      "confidence_score": 0.82,
+      "confidence_reason": "The observed increased risk of bleeding in patients concurrently receiving warfarin and aspirin is well-documented in clinical literature, and the mechanism described here is widely accepted and supported by both VECTOR CONTEXT and GRAPH CONTEXT. However, individual patient factors, such as renal or hepatic impairment, may impact the magnitude of the interaction and its associated risks.",
+      "interaction_summary": "The combined use of warfarin and aspirin increases the risk of bleeding due to simultaneous inhibition of vitamin K-dependent clotting factors (anticoagulant effect) by warfarin, and inhibition of platelet aggregation (antiplatelet effect) by aspirin.",
+      "mechanism_of_interaction": "Warfarin primarily acts by inhibiting the enzyme vitamin K epoxide reductase, leading to decreased synthesis of clotting factors II, VII, IX, and X. Aspirin, on the other hand, irreversibly acetylates platelet cyclooxygenase (COX-1), reducing the production of thromboxane A2 - a key mediator of platelet aggregation. The simultaneous administration of warfarin and aspirin amplifies this combined effect, increasing the risk of bleeding.",
+      "clinical_effects": [
+        "HIGH"
+      ],
+      "recommendation": {
+        "action": "Monitor INR (International Normalized Ratio) closely when initiating or modifying the dose of either drug, and consider adjusting warfarin dosage as needed to maintain an optimal INR range. If possible, alternative antiplatelet agents with a lower risk of bleeding (e.g., clopidogrel) may be considered in patients requiring concurrent anticoagulation and antiplatelet therapy.",
+        "alternatives": "N/A"
+      },
+      "evidence": [
+        "Mechanism: Anticoagulant + antiplatelet effect.",
+        "Warfarin is an anticoagulant that inhibits vitamin K-dependent clotting factors.",
+        "Combining warfarin and aspirin increases risk of bleeding."
+      ],
+      "graph_evidence": "warfarin \u2192 clotting_factors \u2192 aspirin\nwarfarin \u2192 platelets \u2192 aspirin\nwarfarin \u2192 bleeding \u2192 aspirin"
+    },
+    "feedback": {
+      "decision": "Approve",
+      "notes": "this shits great",
+      "confidence": "Low"
+    }
+  }
+]

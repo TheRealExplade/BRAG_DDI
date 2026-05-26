@@ -33,14 +33,31 @@ def build_graph():
 
 
 def query_graph(G, drug1, drug2):
-    valid_paths = []
 
-    for path in nx.all_simple_paths(G, source=drug1, target=drug2, cutoff=3):
-        # keep only meaningful biological paths
-        if any(node in ["bleeding", "platelets", "clotting_factors"] for node in path):
-            valid_paths.append(" → ".join(path))
+    drug1 = drug1.lower()
+    drug2 = drug2.lower()
 
-    return "\n".join(valid_paths) if valid_paths else "No meaningful path found"
+    results = []
+
+    if drug1 not in G or drug2 not in G:
+        return "No graph relationship found"
+
+    # only direct neighbors
+    for neighbor in G.neighbors(drug1):
+
+        if neighbor == drug2:
+            results.append(f"{drug1} → {drug2}")
+
+        elif G.has_edge(neighbor, drug2):
+
+            relation1 = G[drug1][neighbor].get("relation", "")
+            relation2 = G[neighbor][drug2].get("relation", "")
+
+            results.append(
+                f"{drug1} --({relation1})-> {neighbor} --({relation2})-> {drug2}"
+            )
+
+    return "\n".join(results[:3])
 
 
 

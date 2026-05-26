@@ -21,7 +21,10 @@ def run_pipeline(drug1, drug2):
     query = f"{drug1} {drug2} interaction clinical risk bleeding mechanism"
 
     graph_context = query_graph(G, drug1, drug2)
-    #graph_context = "\n".join(graph_context.split("\n")[:2])
+    graph_context = "\n".join(
+    line for line in graph_context.split("\n")
+    if drug1 in line and drug2 in line
+    )
 
 
     print("\n--- GRAPH CONTEXT ---")
@@ -36,7 +39,7 @@ def run_pipeline(drug1, drug2):
             unique_docs.append(d)
             seen.add(d.page_content)
     
-    docs = rerank(query, unique_docs)   # 🔥 ADD THIS
+    docs = rerank(query, unique_docs)   
     #print("\n--- RAW RETRIEVED DOCS ---")
     #for d in docs:
     #    print(d.page_content)
@@ -63,11 +66,11 @@ def run_pipeline(drug1, drug2):
     context = "\n".join([doc.page_content for doc in docs])
 
     combined_context = f"""
-    VECTOR CONTEXT:
-    {context}
+    VECTOR:
+    {context[:500]}
 
-    GRAPH CONTEXT:
-    {graph_context}
+    GRAPH:
+    {graph_context[:300]}
     """
 
     prompt = build_prompt(ddi, combined_context)

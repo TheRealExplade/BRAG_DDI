@@ -1,37 +1,69 @@
 def format_for_pharmacist(data, patient_context):
-    monitoring = data["recommendation"].get("monitoring", ["Not specified"])
+
+    recommendation = data.get("recommendation", {})
+
+    monitoring = recommendation.get(
+        "monitoring",
+        ["Not specified"]
+    )
+
+    alternatives = recommendation.get(
+        "alternatives",
+        ["None"]
+    )
+
+    clinical_effects = data.get(
+        "clinical_effects",
+        ["Not specified"]
+    )
+
+    evidence = data.get(
+        "evidence",
+        []
+    )
+
+    # ensure lists
+    if isinstance(monitoring, str):
+        monitoring = [monitoring]
+
+    if isinstance(alternatives, str):
+        alternatives = [alternatives]
+
+    if isinstance(clinical_effects, str):
+        clinical_effects = [clinical_effects]
+
     return f"""
 🔹 DRUG INTERACTION REPORT
 
 Drugs:
-- Drug A: {data["drug_pair"][0]}
-- Drug B: {data["drug_pair"][1]}
+- Drug A: {data.get("drug_pair", ["N/A", "N/A"])[0]}
+- Drug B: {data.get("drug_pair", ["N/A", "N/A"])[1]}
 
 DDI Prediction:
-- Severity: {data["clinical_severity"]}
-- Confidence: {data["confidence_score"]}
+- Severity: {data.get("clinical_severity", "UNKNOWN")}
+- Confidence: {data.get("confidence_score", "N/A")}
 
 Clinical Summary:
-- {data["interaction_summary"]}
+- {data.get("interaction_summary", "Not available")}
 
 Mechanism:
-- {data["mechanism_of_interaction"]}
+- {data.get("mechanism_of_interaction", "Not available")}
 
 Clinical Risks:
-- {"\n- ".join(data["clinical_effects"])}
+- {"\n- ".join(clinical_effects)}
 
 Recommendation:
-- Action: {data["recommendation"]["action"]}
+- Action: {recommendation.get("action", "Not specified")}
 - Monitoring: {", ".join(monitoring)}
-- Alternative: {", ".join(data["recommendation"]["alternatives"])}
+- Alternative: {", ".join(alternatives)}
 
 Patient Context:
-- Age: {patient_context["age"]}
-- Conditions: {", ".join(patient_context["conditions"])}
-- Current Medications: {", ".join(patient_context["medications"])}
+- Age: {patient_context.get("age", "N/A")}
+- Conditions: {", ".join(patient_context.get("conditions", []))}
+- Current Medications: {", ".join(patient_context.get("medications", []))}
 
 Evidence:
-{"".join([f"{i+1}. {e}\n" for i, e in enumerate(data["evidence"])] )}
+{"".join([f"{i+1}. {e}\n" for i, e in enumerate(evidence)])}
 
 Graph Evidence:
 {data.get("graph_evidence", "N/A")}

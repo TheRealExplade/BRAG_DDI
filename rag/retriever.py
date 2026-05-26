@@ -1,6 +1,8 @@
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+import streamlit as st
 
+@st.cache_resource
 def get_retriever():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
@@ -9,4 +11,4 @@ def get_retriever():
         embedding_function=embeddings
     )
 
-    return db
+    return db   # 🔥 RETURN DB, NOT retriever

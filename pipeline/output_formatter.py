@@ -1,29 +1,33 @@
 import re
 
+import re
+
 def clean_text(text):
-    # remove ANSI escape sequences
     return re.sub(r'\x1B\[[0-?]*[ -/]*[@-~]', '', text)
 
-def format_output(llm_response: str, context : str):
+def extract(label, text):
+
+    pattern = rf"{label}\s*:\s*(.+?)(?=\n[A-Z][A-Za-z\s]+:|\Z)"
+
+    match = re.search(pattern, text, re.DOTALL)
+
+    return match.group(1).strip() if match else "N/A"
+
+def format_output(llm_response, context):
+
     llm_response = clean_text(llm_response)
 
-    def extract(section):
-        pattern = rf"{section}:\s*(.*?)(?:\n[A-Z][a-zA-Z ]+:|$)"
-        match = re.search(pattern, llm_response, re.DOTALL)
-        return match.group(1).strip() if match else "N/A"
-
-    structured = {
-        "explanation": extract("Explanation"),
-        "mechanism": extract("Mechanism"),
-        "risk": extract("Risk Level"),
-        "recommendation": extract("Recommendation"),
-        "evidence": extract_evidence(context),
-        "reasoning": extract("Reasoning"),
-        "confidence": parse_confidence(extract("Confidence")),
-        "confidence_reason": extract("Confidence Reason"),
-        "alternatives": extract("Alternatives")
+    return {
+        "explanation": extract("Explanation", llm_response),
+        "mechanism": extract("Mechanism", llm_response),
+        "risk": extract("Risk Level", llm_response),
+        "recommendation": extract("Recommendation", llm_response),
+        "alternatives": extract("Alternatives", llm_response),
+        "confidence": extract("Confidence", llm_response),
+        "confidence_reason": extract("Confidence Reason", llm_response),
+        "reasoning": extract("Reasoning", llm_response),
+        "evidence": extract_evidence(context)
     }
-    return structured
 
 
 def parse_confidence(val):

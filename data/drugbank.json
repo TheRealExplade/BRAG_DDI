@@ -9,6 +9,33 @@
     "effects": ["bleeding"]
   },
   {
+    "drug1": "warfarin",
+    "drug2": "ibuprofen",
+    "interaction": "Increased bleeding risk",
+    "mechanism": "Platelet inhibition + anticoagulation",
+    "enzymes": ["CYP2C9"],
+    "targets": ["platelets"],
+    "effects": ["bleeding", "gi_bleeding"]
+  },
+  {
+    "drug1": "warfarin",
+    "drug2": "amiodarone",
+    "interaction": "Increased warfarin levels",
+    "mechanism": "CYP2C9 inhibition",
+    "enzymes": ["CYP2C9"],
+    "targets": ["liver"],
+    "effects": ["bleeding"]
+  },
+  {
+    "drug1": "warfarin",
+    "drug2": "rifampin",
+    "interaction": "Reduced warfarin efficacy",
+    "mechanism": "CYP2C9 induction",
+    "enzymes": ["CYP2C9"],
+    "targets": ["liver"],
+    "effects": ["clotting"]
+  },
+  {
     "drug1": "ketoconazole",
     "drug2": "simvastatin",
     "interaction": "Increased statin toxicity",
@@ -16,5 +43,140 @@
     "enzymes": ["CYP3A4"],
     "targets": ["liver"],
     "effects": ["rhabdomyolysis"]
+  },
+  {
+    "drug1": "clarithromycin",
+    "drug2": "simvastatin",
+    "interaction": "Increased statin toxicity",
+    "mechanism": "CYP3A4 inhibition",
+    "enzymes": ["CYP3A4"],
+    "targets": ["liver"],
+    "effects": ["rhabdomyolysis"]
+  },
+  {
+    "drug1": "erythromycin",
+    "drug2": "simvastatin",
+    "interaction": "Increased statin toxicity",
+    "mechanism": "CYP3A4 inhibition",
+    "enzymes": ["CYP3A4"],
+    "targets": ["liver"],
+    "effects": ["muscle_toxicity"]
+  },
+  {
+    "drug1": "metformin",
+    "drug2": "cimetidine",
+    "interaction": "Increased metformin levels",
+    "mechanism": "Renal clearance inhibition",
+    "enzymes": [],
+    "targets": ["kidney"],
+    "effects": ["lactic_acidosis"]
+  },
+  {
+    "drug1": "digoxin",
+    "drug2": "verapamil",
+    "interaction": "Increased digoxin levels",
+    "mechanism": "P-gp inhibition",
+    "enzymes": [],
+    "targets": ["heart"],
+    "effects": ["arrhythmia"]
+  },
+  {
+    "drug1": "digoxin",
+    "drug2": "amiodarone",
+    "interaction": "Increased digoxin toxicity",
+    "mechanism": "P-gp inhibition",
+    "enzymes": [],
+    "targets": ["heart"],
+    "effects": ["arrhythmia"]
+  },
+  {
+    "drug1": "lisinopril",
+    "drug2": "spironolactone",
+    "interaction": "Increased potassium levels",
+    "mechanism": "Reduced potassium excretion",
+    "enzymes": [],
+    "targets": ["kidney"],
+    "effects": ["hyperkalemia"]
+  },
+  {
+    "drug1": "losartan",
+    "drug2": "spironolactone",
+    "interaction": "Hyperkalemia risk",
+    "mechanism": "RAAS inhibition",
+    "enzymes": [],
+    "targets": ["kidney"],
+    "effects": ["hyperkalemia"]
+  },
+  {
+    "drug1": "insulin",
+    "drug2": "propranolol",
+    "interaction": "Masked hypoglycemia",
+    "mechanism": "Beta-blockade reduces symptoms",
+    "enzymes": [],
+    "targets": ["heart"],
+    "effects": ["hypoglycemia"]
+  },
+  {
+    "drug1": "fluoxetine",
+    "drug2": "tramadol",
+    "interaction": "Serotonin syndrome risk",
+    "mechanism": "Serotonin reuptake inhibition",
+    "enzymes": ["CYP2D6"],
+    "targets": ["brain"],
+    "effects": ["serotonin_syndrome"]
+  },
+  {
+    "drug1": "sertraline",
+    "drug2": "linezolid",
+    "interaction": "Serotonin syndrome",
+    "mechanism": "MAO inhibition + SSRI",
+    "enzymes": [],
+    "targets": ["brain"],
+    "effects": ["serotonin_syndrome"]
+  },
+  {
+    "drug1": "phenytoin",
+    "drug2": "carbamazepine",
+    "interaction": "Altered drug levels",
+    "mechanism": "Enzyme induction",
+    "enzymes": ["CYP3A4"],
+    "targets": ["liver"],
+    "effects": ["toxicity"]
+  },
+  {
+    "drug1": "clopidogrel",
+    "drug2": "omeprazole",
+    "interaction": "Reduced clopidogrel efficacy",
+    "mechanism": "CYP2C19 inhibition",
+    "enzymes": ["CYP2C19"],
+    "targets": ["platelets"],
+    "effects": ["thrombosis"]
+  },
+  {
+    "drug1": "sildenafil",
+    "drug2": "nitroglycerin",
+    "interaction": "Severe hypotension",
+    "mechanism": "Excess nitric oxide signaling",
+    "enzymes": [],
+    "targets": ["blood_vessels"],
+    "effects": ["hypotension"]
+  },
+  {
+    "drug1": "alcohol",
+    "drug2": "diazepam",
+    "interaction": "CNS depression",
+    "mechanism": "Additive sedative effects",
+    "enzymes": [],
+    "targets": ["brain"],
+    "effects": ["respiratory_depression"]
+  },
+  {
+    "drug1": "codeine",
+    "drug2": "fluoxetine",
+    "interaction": "Reduced analgesic effect",
+    "mechanism": "CYP2D6 inhibition",
+    "enzymes": ["CYP2D6"],
+    "targets": ["brain"],
+    "effects": ["reduced_efficacy"]
   }
 ]
