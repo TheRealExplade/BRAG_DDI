@@ -1,5 +1,3 @@
-# pipeline/main_pipeline.py
-
 from ddi.mock_ddi import get_ddi
 from rag.retriever import get_retriever
 from llm.ollama_client import OllamaLLM
@@ -8,11 +6,9 @@ from pipeline.output_formatter import format_output
 from pipeline.clinical_formatter import format_for_pharmacist
 from pipeline.output_formatter import format_output
 from rag.reranker import rerank
-from rag.graph import build_graph, query_graph
+from rag.graph import load_graph, query_graph
 
-G = build_graph()
-
-
+G, lookup = load_graph()
 
 def run_pipeline(drug1, drug2):
     ddi = get_ddi(drug1, drug2)
@@ -20,12 +16,13 @@ def run_pipeline(drug1, drug2):
     retriever = get_retriever()
     query = f"{drug1} {drug2} interaction clinical risk bleeding mechanism"
 
-    graph_context = query_graph(G, drug1, drug2)
-    graph_context = "\n".join(
-    line for line in graph_context.split("\n")
-    if drug1 in line and drug2 in line
+    graph_context = query_graph(
+        G,
+        lookup,
+        drug1,
+        drug2
     )
-
+    
 
     print("\n--- GRAPH CONTEXT ---")
     print(graph_context)
@@ -43,19 +40,9 @@ def run_pipeline(drug1, drug2):
     #print("\n--- RAW RETRIEVED DOCS ---")
     #for d in docs:
     #    print(d.page_content)
-
-    filtered_docs = [
-        d for d in docs
-        if drug1.lower() in d.page_content.lower()
-        and drug2.lower() in d.page_content.lower()
-    ]
-
-    if not filtered_docs:
-        return {
-            "error": "INSUFFICIENT DATA",
-            "reason": "No relevant context found for given drug pair"
-        }
-    docs = filtered_docs
+    
+    
+    
     print("\n--- RETRIEVED DOCS ---")
     for d in docs:
         print(d.page_content)
@@ -70,7 +57,7 @@ def run_pipeline(drug1, drug2):
     {context[:500]}
 
     GRAPH:
-    {graph_context[:300]}
+    {graph_context[:1000]}
     """
 
     prompt = build_prompt(ddi, combined_context)
@@ -117,7 +104,7 @@ def run_pipeline(drug1, drug2):
     return final_output
 
 if __name__ == "__main__":
-    result = run_pipeline("warfarin", "aspirin")
+    result = run_pipeline("warfarin", "acetylsalicylic acid")
 
     patient_context = {
         "age": 65,
