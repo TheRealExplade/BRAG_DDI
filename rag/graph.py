@@ -15,6 +15,29 @@ OVERLAY_PATH = os.path.join(
     "enzyme_transporter_overlay.json"
 )
 
+# ATC drug-classification data from RxClass (rag/fetch/fetch_rxclass.py).
+# A different kind of fact than the enzyme overlay above: drug CLASS, not
+# drug MECHANISM. Not currently used for interaction reasoning -- it's the
+# foundation for later class-level reasoning ("any Vitamin K antagonist +
+# any platelet aggregation inhibitor"), surfaced today as extra context in
+# the mechanism report.
+RXCLASS_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data",
+    "rxclass_atc.json"
+)
+
+# Brand-name synonyms from RxNorm (rag/fetch/fetch_rxnorm_aliases.py). Unlike
+# COMMON_ALIASES (7 hand-typed entries), this is a comprehensive fetched
+# list -- merged directly into the name lookup table below rather than
+# through the alias-resolution indirection, since these are just more names
+# for the same drug_id, not a separate cross-database matching problem.
+RXNORM_ALIASES_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data",
+    "rxnorm_aliases.json"
+)
+
 # DrugBank uses formal/generic names; map common brand/colloquial names
 # that show up in demos and user input to the name actually in drugs.json.
 # Also doubles as a USAN<->INN crosswalk for matching external datasets
@@ -66,6 +89,31 @@ def get_overlay_meta():
     return _overlay_meta
 
 
+_rxclass_meta = None
+
+
+def load_rxclass():
+    """ATC classification data keyed by drug_id, or {} if absent."""
+    global _rxclass_meta
+
+    if not os.path.exists(RXCLASS_PATH):
+        _rxclass_meta = None
+        return {}
+
+    with open(RXCLASS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    _rxclass_meta = data.get("_meta")
+
+    return data.get("drugs", {})
+
+
+def get_rxclass_meta():
+    if _rxclass_meta is None:
+        load_rxclass()
+    return _rxclass_meta
+
+
 def load_drugs():
     """Parsed drugs.json with the enzyme/transporter overlay merged in, cached.
 
@@ -95,6 +143,14 @@ def load_drugs():
                     if not drug.get(field) and extra.get(field):
                         drug[field] = extra[field]
                         drug.setdefault("_overlay_fields", []).append(field)
+
+        rxclass = load_rxclass()
+
+        if rxclass:
+            for drug in drugs:
+                extra = rxclass.get(drug["drug_id"])
+                if extra and extra.get("atc_classes"):
+                    drug["atc_classes"] = extra["atc_classes"]
 
         _drugs_cache = drugs
 
@@ -270,6 +326,23 @@ def build_graph():
     return G
 
 
+_rxnorm_aliases_cache = None
+
+
+def load_rxnorm_aliases():
+    """drug_id -> {canonical_name, brand_names}, or {} if not fetched."""
+    global _rxnorm_aliases_cache
+
+    if _rxnorm_aliases_cache is None:
+        if not os.path.exists(RXNORM_ALIASES_PATH):
+            _rxnorm_aliases_cache = {}
+        else:
+            with open(RXNORM_ALIASES_PATH, encoding="utf-8") as f:
+                _rxnorm_aliases_cache = json.load(f).get("drugs", {})
+
+    return _rxnorm_aliases_cache
+
+
 def build_name_lookup(drugs):
 
     lookup = {}
@@ -279,6 +352,16 @@ def build_name_lookup(drugs):
         lookup[
             drug["name"].lower()
         ] = drug["drug_id"]
+
+    # Merge in fetched brand names (Coumadin, Jantoven, ...) as additional
+    # keys pointing at the same drug_id. Only fill gaps -- never overwrite
+    # a name that already resolves to something, in the unlikely case a
+    # brand name collides with an unrelated drug's own generic name.
+    for drug_id, entry in load_rxnorm_aliases().items():
+        for brand in entry.get("brand_names", []):
+            key = brand.lower()
+            if key not in lookup:
+                lookup[key] = drug_id
 
     return lookup
 

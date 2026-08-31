@@ -17,6 +17,7 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import sys
 
 # README documents `python rag/ingest.py`, which puts rag/ on sys.path rather
@@ -208,10 +209,18 @@ def build_db(include_drug_text=False):
 
     embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 
-    # Drop any existing collection first. add_texts APPENDS, so without this
-    # every re-run would duplicate the whole corpus and skew retrieval.
-    db = Chroma(persist_directory=PERSIST_DIR, embedding_function=embeddings)
-    db.delete_collection()
+    # Wipe the persist directory outright rather than calling
+    # Chroma.delete_collection(). Confirmed by direct inspection:
+    # delete_collection() leaves the old collection's on-disk HNSW index
+    # folders behind (12 orphaned UUID directories, 239 MB, accumulated
+    # across repeated re-ingests this session) instead of removing them,
+    # and at least once left the DB in a state where the collection
+    # existed but held zero documents after a rebuild. A full directory
+    # wipe has no such stale-state risk -- there's nothing left to be
+    # stale. add_texts() APPENDS, so some form of reset is required
+    # before every re-run or the corpus would just keep duplicating.
+    if os.path.exists(PERSIST_DIR):
+        shutil.rmtree(PERSIST_DIR)
 
     db = Chroma(persist_directory=PERSIST_DIR, embedding_function=embeddings)
 

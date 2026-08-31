@@ -1,0 +1,2414 @@
+{
+  "_meta": {
+    "source": "RxNorm/RxClass (rxnav.nlm.nih.gov), NLM, free/public, no key required",
+    "purpose": "ATC drug classification -- foundation for future class-level reasoning, NOT a substitute for the enzyme/transporter overlay",
+    "keyed_by": "this project's own DrugBank drug_id",
+    "entry_count": 196
+  },
+  "drugs": {
+    "DB00682": {
+      "name": "Warfarin",
+      "rxcui": "11289",
+      "atc_classes": [
+        {
+          "code": "B01AA",
+          "name": "Vitamin K antagonists"
+        }
+      ]
+    },
+    "DB00945": {
+      "name": "Acetylsalicylic acid",
+      "rxcui": "1191",
+      "atc_classes": [
+        {
+          "code": "A01AD",
+          "name": "Other agents for local oral treatment"
+        },
+        {
+          "code": "B01AC",
+          "name": "Platelet aggregation inhibitors excl. heparin"
+        },
+        {
+          "code": "N02BA",
+          "name": "Salicylic acid and derivatives"
+        },
+        {
+          "code": "N02AJ",
+          "name": "Opioids in combination with non-opioid analgesics"
+        }
+      ]
+    },
+    "DB00196": {
+      "name": "Fluconazole",
+      "rxcui": "4450",
+      "atc_classes": [
+        {
+          "code": "D01AC",
+          "name": "Imidazole and triazole derivatives"
+        },
+        {
+          "code": "J02AC",
+          "name": "Triazole and tetrazole derivatives"
+        }
+      ]
+    },
+    "DB01045": {
+      "name": "Rifampin",
+      "rxcui": "9384",
+      "atc_classes": [
+        {
+          "code": "J04AM",
+          "name": "Combinations of drugs for treatment of tuberculosis"
+        },
+        {
+          "code": "J04AB",
+          "name": "Antibiotics"
+        }
+      ]
+    },
+    "DB00641": {
+      "name": "Simvastatin",
+      "rxcui": "36567",
+      "atc_classes": [
+        {
+          "code": "A10BH",
+          "name": "Dipeptidyl peptidase 4 (DPP-4) inhibitors"
+        },
+        {
+          "code": "C10BA",
+          "name": "Combinations of various lipid modifying agents"
+        },
+        {
+          "code": "C10AA",
+          "name": "HMG CoA reductase inhibitors"
+        }
+      ]
+    },
+    "DB01076": {
+      "name": "Atorvastatin",
+      "rxcui": "83367",
+      "atc_classes": [
+        {
+          "code": "C10BA",
+          "name": "Combinations of various lipid modifying agents"
+        },
+        {
+          "code": "C10BX",
+          "name": "Lipid modifying agents in combination with other drugs"
+        },
+        {
+          "code": "C10AA",
+          "name": "HMG CoA reductase inhibitors"
+        }
+      ]
+    },
+    "DB01026": {
+      "name": "Ketoconazole",
+      "rxcui": "6135",
+      "atc_classes": [
+        {
+          "code": "H02CA",
+          "name": "Anticorticosteroids"
+        },
+        {
+          "code": "D01AC",
+          "name": "Imidazole and triazole derivatives"
+        },
+        {
+          "code": "G01AF",
+          "name": "Imidazole derivatives"
+        },
+        {
+          "code": "J02AB",
+          "name": "Imidazole derivatives"
+        }
+      ]
+    },
+    "DB01211": {
+      "name": "Clarithromycin",
+      "rxcui": "21212",
+      "atc_classes": [
+        {
+          "code": "J01FA",
+          "name": "Macrolides"
+        }
+      ]
+    },
+    "DB00390": {
+      "name": "Digoxin",
+      "rxcui": "3407",
+      "atc_classes": [
+        {
+          "code": "C01AA",
+          "name": "Digitalis glycosides"
+        }
+      ]
+    },
+    "DB00908": {
+      "name": "Quinidine",
+      "rxcui": "9068",
+      "atc_classes": [
+        {
+          "code": "C01BA",
+          "name": "Antiarrhythmics, class Ia"
+        }
+      ]
+    },
+    "DB01118": {
+      "name": "Amiodarone",
+      "rxcui": "703",
+      "atc_classes": [
+        {
+          "code": "C01BD",
+          "name": "Antiarrhythmics, class III"
+        }
+      ]
+    },
+    "DB00338": {
+      "name": "Omeprazole",
+      "rxcui": "7646",
+      "atc_classes": [
+        {
+          "code": "A02BD",
+          "name": "Combinations for eradication of Helicobacter pylori"
+        },
+        {
+          "code": "A02BC",
+          "name": "Proton pump inhibitors"
+        }
+      ]
+    },
+    "DB00758": {
+      "name": "Clopidogrel",
+      "rxcui": "32968",
+      "atc_classes": [
+        {
+          "code": "B01AC",
+          "name": "Platelet aggregation inhibitors excl. heparin"
+        }
+      ]
+    },
+    "DB01050": {
+      "name": "Ibuprofen",
+      "rxcui": "5640",
+      "atc_classes": [
+        {
+          "code": "N02AJ",
+          "name": "Opioids in combination with non-opioid analgesics"
+        },
+        {
+          "code": "C01EB",
+          "name": "Other cardiac preparations"
+        },
+        {
+          "code": "G02CC",
+          "name": "Antiinflammatory products for vaginal administration"
+        },
+        {
+          "code": "M01AE",
+          "name": "Propionic acid derivatives"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        },
+        {
+          "code": "R02AX",
+          "name": "Other throat preparations"
+        }
+      ]
+    },
+    "DB00363": {
+      "name": "Clozapine",
+      "rxcui": "2626",
+      "atc_classes": [
+        {
+          "code": "N05AH",
+          "name": "Diazepines, oxazepines, thiazepines and oxepines"
+        }
+      ]
+    },
+    "DB00477": {
+      "name": "Chlorpromazine",
+      "rxcui": "2403",
+      "atc_classes": [
+        {
+          "code": "N05AA",
+          "name": "Phenothiazines with aliphatic side-chain"
+        }
+      ]
+    },
+    "DB00321": {
+      "name": "Amitriptyline",
+      "rxcui": "704",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00458": {
+      "name": "Imipramine",
+      "rxcui": "5691",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00564": {
+      "name": "Carbamazepine",
+      "rxcui": "2002",
+      "atc_classes": [
+        {
+          "code": "N03AF",
+          "name": "Carboxamide derivatives"
+        }
+      ]
+    },
+    "DB00814": {
+      "name": "Meloxicam",
+      "rxcui": "41493",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        },
+        {
+          "code": "M01AC",
+          "name": "Oxicams"
+        }
+      ]
+    },
+    "DB01142": {
+      "name": "Doxepin",
+      "rxcui": "3638",
+      "atc_classes": [
+        {
+          "code": "D04AX",
+          "name": "Other antipruritics"
+        },
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00091": {
+      "name": "Cyclosporine",
+      "rxcui": "3008",
+      "atc_classes": [
+        {
+          "code": "L04AD",
+          "name": "Calcineurin inhibitors"
+        },
+        {
+          "code": "S01XA",
+          "name": "Other ophthalmologicals"
+        }
+      ]
+    },
+    "DB00721": {
+      "name": "Procaine",
+      "rxcui": "8701",
+      "atc_classes": [
+        {
+          "code": "C05AD",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "N01BA",
+          "name": "Esters of aminobenzoic acid"
+        },
+        {
+          "code": "S01HA",
+          "name": "Local anesthetics"
+        }
+      ]
+    },
+    "DB01242": {
+      "name": "Clomipramine",
+      "rxcui": "2597",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB01002": {
+      "name": "Levobupivacaine",
+      "rxcui": "259453",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        }
+      ]
+    },
+    "DB00296": {
+      "name": "Ropivacaine",
+      "rxcui": "35780",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        }
+      ]
+    },
+    "DB00502": {
+      "name": "Haloperidol",
+      "rxcui": "5093",
+      "atc_classes": [
+        {
+          "code": "N05AD",
+          "name": "Butyrophenone derivatives"
+        }
+      ]
+    },
+    "DB09241": {
+      "name": "Methylene blue",
+      "rxcui": "6878",
+      "atc_classes": [
+        {
+          "code": "V03AB",
+          "name": "Antidotes"
+        },
+        {
+          "code": "V04CG",
+          "name": "Tests for gastric secretion"
+        }
+      ]
+    },
+    "DB01075": {
+      "name": "Diphenhydramine",
+      "rxcui": "3498",
+      "atc_classes": [
+        {
+          "code": "M01AE",
+          "name": "Propionic acid derivatives"
+        },
+        {
+          "code": "D04AA",
+          "name": "Antihistamines for topical use"
+        },
+        {
+          "code": "R06AA",
+          "name": "Aminoalkyl ethers"
+        }
+      ]
+    },
+    "DB01149": {
+      "name": "Nefazodone",
+      "rxcui": "31565",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB01224": {
+      "name": "Quetiapine",
+      "rxcui": "51272",
+      "atc_classes": [
+        {
+          "code": "N05AH",
+          "name": "Diazepines, oxazepines, thiazepines and oxepines"
+        }
+      ]
+    },
+    "DB00909": {
+      "name": "Zonisamide",
+      "rxcui": "39998",
+      "atc_classes": [
+        {
+          "code": "N03AX",
+          "name": "Other antiepileptics"
+        }
+      ]
+    },
+    "DB00176": {
+      "name": "Fluvoxamine",
+      "rxcui": "42355",
+      "atc_classes": [
+        {
+          "code": "N06AB",
+          "name": "Selective serotonin reuptake inhibitors"
+        }
+      ]
+    },
+    "DB06700": {
+      "name": "Desvenlafaxine",
+      "rxcui": "734064",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB01151": {
+      "name": "Desipramine",
+      "rxcui": "3247",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00468": {
+      "name": "Quinine",
+      "rxcui": "9071",
+      "atc_classes": [
+        {
+          "code": "P01BC",
+          "name": "Methanolquinolines"
+        }
+      ]
+    },
+    "DB01267": {
+      "name": "Paliperidone",
+      "rxcui": "679314",
+      "atc_classes": [
+        {
+          "code": "N05AX",
+          "name": "Other antipsychotics"
+        }
+      ]
+    },
+    "DB04896": {
+      "name": "Milnacipran",
+      "rxcui": "588250",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB08910": {
+      "name": "Pomalidomide",
+      "rxcui": "1369713",
+      "atc_classes": [
+        {
+          "code": "L04AX",
+          "name": "Other immunosuppressants"
+        }
+      ]
+    },
+    "DB00246": {
+      "name": "Ziprasidone",
+      "rxcui": "115698",
+      "atc_classes": [
+        {
+          "code": "N05AE",
+          "name": "Indole derivatives"
+        }
+      ]
+    },
+    "DB09118": {
+      "name": "Stiripentol",
+      "rxcui": "2054968",
+      "atc_classes": [
+        {
+          "code": "N03AX",
+          "name": "Other antiepileptics"
+        }
+      ]
+    },
+    "DB00312": {
+      "name": "Pentobarbital",
+      "rxcui": "8004",
+      "atc_classes": [
+        {
+          "code": "N05CA",
+          "name": "Barbiturates, plain"
+        }
+      ]
+    },
+    "DB00961": {
+      "name": "Mepivacaine",
+      "rxcui": "6759",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        }
+      ]
+    },
+    "DB00540": {
+      "name": "Nortriptyline",
+      "rxcui": "7531",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00281": {
+      "name": "Lidocaine",
+      "rxcui": "6387",
+      "atc_classes": [
+        {
+          "code": "C01BB",
+          "name": "Antiarrhythmics, class Ib"
+        },
+        {
+          "code": "C05AD",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "D04AB",
+          "name": "Anesthetics for topical use"
+        },
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        },
+        {
+          "code": "R02AD",
+          "name": "Anesthetics, local"
+        },
+        {
+          "code": "S01HA",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "S02DA",
+          "name": "Analgesics and anesthetics"
+        }
+      ]
+    },
+    "DB00661": {
+      "name": "Verapamil",
+      "rxcui": "11170",
+      "atc_classes": [
+        {
+          "code": "C08DA",
+          "name": "Phenylalkylamine derivatives"
+        },
+        {
+          "code": "C09BB",
+          "name": "ACE inhibitors and calcium channel blockers"
+        }
+      ]
+    },
+    "DB01069": {
+      "name": "Promethazine",
+      "rxcui": "8745",
+      "atc_classes": [
+        {
+          "code": "D04AA",
+          "name": "Antihistamines for topical use"
+        },
+        {
+          "code": "R06AD",
+          "name": "Phenothiazine derivatives"
+        }
+      ]
+    },
+    "DB00333": {
+      "name": "Methadone",
+      "rxcui": "6813",
+      "atc_classes": [
+        {
+          "code": "N07BC",
+          "name": "Drugs used in opioid dependence"
+        }
+      ]
+    },
+    "DB00783": {
+      "name": "Estradiol",
+      "rxcui": "4083",
+      "atc_classes": [
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        },
+        {
+          "code": "G03AA",
+          "name": "Progestogens and estrogens, fixed combinations"
+        },
+        {
+          "code": "G03AB",
+          "name": "Progestogens and estrogens, sequential preparations"
+        }
+      ]
+    },
+    "DB00270": {
+      "name": "Isradipine",
+      "rxcui": "33910",
+      "atc_classes": [
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB04948": {
+      "name": "Lofexidine",
+      "rxcui": "28863",
+      "atc_classes": [
+        {
+          "code": "N07BC",
+          "name": "Drugs used in opioid dependence"
+        }
+      ]
+    },
+    "DB13954": {
+      "name": "Estradiol cypionate",
+      "rxcui": "1000146",
+      "atc_classes": [
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        },
+        {
+          "code": "G03AA",
+          "name": "Progestogens and estrogens, fixed combinations"
+        }
+      ]
+    },
+    "DB01233": {
+      "name": "Metoclopramide",
+      "rxcui": "6915",
+      "atc_classes": [
+        {
+          "code": "A03FA",
+          "name": "Propulsives"
+        }
+      ]
+    },
+    "DB13956": {
+      "name": "Estradiol valerate",
+      "rxcui": "24395",
+      "atc_classes": [
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        },
+        {
+          "code": "G03AA",
+          "name": "Progestogens and estrogens, fixed combinations"
+        },
+        {
+          "code": "G03AB",
+          "name": "Progestogens and estrogens, sequential preparations"
+        }
+      ]
+    },
+    "DB01238": {
+      "name": "Aripiprazole",
+      "rxcui": "89013",
+      "atc_classes": [
+        {
+          "code": "N05AX",
+          "name": "Other antipsychotics"
+        }
+      ]
+    },
+    "DB00960": {
+      "name": "Pindolol",
+      "rxcui": "8332",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB01359": {
+      "name": "Penbutolol",
+      "rxcui": "7973",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB00328": {
+      "name": "Indomethacin",
+      "rxcui": "5781",
+      "atc_classes": [
+        {
+          "code": "C01EB",
+          "name": "Other cardiac preparations"
+        },
+        {
+          "code": "M01AB",
+          "name": "Acetic acid derivatives and related substances"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        },
+        {
+          "code": "S01BC",
+          "name": "Antiinflammatory agents, non-steroids"
+        }
+      ]
+    },
+    "DB00252": {
+      "name": "Phenytoin",
+      "rxcui": "8183",
+      "atc_classes": [
+        {
+          "code": "N03AB",
+          "name": "Hydantoin derivatives"
+        }
+      ]
+    },
+    "DB00571": {
+      "name": "Propranolol",
+      "rxcui": "8787",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB00864": {
+      "name": "Tacrolimus",
+      "rxcui": "42316",
+      "atc_classes": [
+        {
+          "code": "D11AH",
+          "name": "Agents for dermatitis, excluding corticosteroids"
+        },
+        {
+          "code": "L04AD",
+          "name": "Calcineurin inhibitors"
+        }
+      ]
+    },
+    "DB00934": {
+      "name": "Maprotiline",
+      "rxcui": "6646",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00622": {
+      "name": "Nicardipine",
+      "rxcui": "7396",
+      "atc_classes": [
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB00297": {
+      "name": "Bupivacaine",
+      "rxcui": "1815",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        }
+      ]
+    },
+    "DB06770": {
+      "name": "Benzyl alcohol",
+      "rxcui": "1426",
+      "atc_classes": [
+        {
+          "code": "P03AX",
+          "name": "Other ectoparasiticides, incl. scabicides"
+        }
+      ]
+    },
+    "DB00193": {
+      "name": "Tramadol",
+      "rxcui": "10689",
+      "atc_classes": [
+        {
+          "code": "N02AX",
+          "name": "Other opioids"
+        },
+        {
+          "code": "N02AJ",
+          "name": "Opioids in combination with non-opioid analgesics"
+        }
+      ]
+    },
+    "DB09068": {
+      "name": "Vortioxetine",
+      "rxcui": "1455099",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB00280": {
+      "name": "Disopyramide",
+      "rxcui": "3541",
+      "atc_classes": [
+        {
+          "code": "C01BA",
+          "name": "Antiarrhythmics, class Ia"
+        }
+      ]
+    },
+    "DB00476": {
+      "name": "Duloxetine",
+      "rxcui": "72625",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB00555": {
+      "name": "Lamotrigine",
+      "rxcui": "28439",
+      "atc_classes": [
+        {
+          "code": "N03AX",
+          "name": "Other antiepileptics"
+        }
+      ]
+    },
+    "DB01086": {
+      "name": "Benzocaine",
+      "rxcui": "1399",
+      "atc_classes": [
+        {
+          "code": "C05AD",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "D04AB",
+          "name": "Anesthetics for topical use"
+        },
+        {
+          "code": "N01BA",
+          "name": "Esters of aminobenzoic acid"
+        },
+        {
+          "code": "R02AD",
+          "name": "Anesthetics, local"
+        }
+      ]
+    },
+    "DB00763": {
+      "name": "Methimazole",
+      "rxcui": "6835",
+      "atc_classes": [
+        {
+          "code": "H03BB",
+          "name": "Sulfur-containing imidazole derivatives"
+        }
+      ]
+    },
+    "DB00398": {
+      "name": "Sorafenib",
+      "rxcui": "495881",
+      "atc_classes": [
+        {
+          "code": "L01EX",
+          "name": "Other protein kinase inhibitors"
+        }
+      ]
+    },
+    "DB00795": {
+      "name": "Sulfasalazine",
+      "rxcui": "9524",
+      "atc_classes": [
+        {
+          "code": "A07EC",
+          "name": "Aminosalicylic acid and similar agents"
+        }
+      ]
+    },
+    "DB00999": {
+      "name": "Hydrochlorothiazide",
+      "rxcui": "5487",
+      "atc_classes": [
+        {
+          "code": "C09XA",
+          "name": "Renin-inhibitors"
+        },
+        {
+          "code": "C03AA",
+          "name": "Thiazides, plain"
+        },
+        {
+          "code": "C09DX",
+          "name": "Angiotensin II receptor blockers (ARBs), other combinations"
+        }
+      ]
+    },
+    "DB00420": {
+      "name": "Promazine",
+      "rxcui": "8742",
+      "atc_classes": [
+        {
+          "code": "N05AA",
+          "name": "Phenothiazines with aliphatic side-chain"
+        }
+      ]
+    },
+    "DB00472": {
+      "name": "Fluoxetine",
+      "rxcui": "4493",
+      "atc_classes": [
+        {
+          "code": "N06AB",
+          "name": "Selective serotonin reuptake inhibitors"
+        }
+      ]
+    },
+    "DB01174": {
+      "name": "Phenobarbital",
+      "rxcui": "8134",
+      "atc_classes": [
+        {
+          "code": "N03AA",
+          "name": "Barbiturates and derivatives"
+        }
+      ]
+    },
+    "DB09185": {
+      "name": "Viloxazine",
+      "rxcui": "11196",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB00285": {
+      "name": "Venlafaxine",
+      "rxcui": "39786",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB01367": {
+      "name": "Rasagiline",
+      "rxcui": "134748",
+      "atc_classes": [
+        {
+          "code": "N04BD",
+          "name": "Monoamine oxidase B inhibitors"
+        }
+      ]
+    },
+    "DB13952": {
+      "name": "Estradiol acetate",
+      "rxcui": "405416",
+      "atc_classes": [
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        }
+      ]
+    },
+    "DB00726": {
+      "name": "Trimipramine",
+      "rxcui": "10834",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00907": {
+      "name": "Cocaine",
+      "rxcui": "2653",
+      "atc_classes": [
+        {
+          "code": "N01BC",
+          "name": "Esters of benzoic acid"
+        },
+        {
+          "code": "R02AD",
+          "name": "Anesthetics, local"
+        },
+        {
+          "code": "S01HA",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "S02DA",
+          "name": "Analgesics and anesthetics"
+        }
+      ]
+    },
+    "DB00373": {
+      "name": "Timolol",
+      "rxcui": "10600",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        },
+        {
+          "code": "S01ED",
+          "name": "Beta blocking agents"
+        }
+      ]
+    },
+    "DB00482": {
+      "name": "Celecoxib",
+      "rxcui": "140587",
+      "atc_classes": [
+        {
+          "code": "L01XX",
+          "name": "Other antineoplastic agents"
+        },
+        {
+          "code": "M01AH",
+          "name": "Coxibs"
+        },
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        },
+        {
+          "code": "N02AJ",
+          "name": "Opioids in combination with non-opioid analgesics"
+        }
+      ]
+    },
+    "DB01166": {
+      "name": "Cilostazol",
+      "rxcui": "21107",
+      "atc_classes": [
+        {
+          "code": "B01AC",
+          "name": "Platelet aggregation inhibitors excl. heparin"
+        }
+      ]
+    },
+    "DB01015": {
+      "name": "Sulfamethoxazole",
+      "rxcui": "10180",
+      "atc_classes": [
+        {
+          "code": "J01EC",
+          "name": "Intermediate-acting sulfonamides"
+        },
+        {
+          "code": "J01EE",
+          "name": "Combinations of sulfonamides and trimethoprim, incl. derivatives"
+        }
+      ]
+    },
+    "DB01115": {
+      "name": "Nifedipine",
+      "rxcui": "7417",
+      "atc_classes": [
+        {
+          "code": "C07FB",
+          "name": "Beta blocking agents and calcium channel blockers"
+        },
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB00418": {
+      "name": "Secobarbital",
+      "rxcui": "9624",
+      "atc_classes": [
+        {
+          "code": "N05CA",
+          "name": "Barbiturates, plain"
+        }
+      ]
+    },
+    "DB00537": {
+      "name": "Ciprofloxacin",
+      "rxcui": "2551",
+      "atc_classes": [
+        {
+          "code": "J01MA",
+          "name": "Fluoroquinolones"
+        },
+        {
+          "code": "S01AE",
+          "name": "Fluoroquinolones"
+        },
+        {
+          "code": "S02AA",
+          "name": "Antiinfectives"
+        },
+        {
+          "code": "S03AA",
+          "name": "Antiinfectives"
+        }
+      ]
+    },
+    "DB01435": {
+      "name": "Antipyrine",
+      "rxcui": "1001",
+      "atc_classes": [
+        {
+          "code": "N02BB",
+          "name": "Pyrazolones"
+        },
+        {
+          "code": "S02DA",
+          "name": "Analgesics and anesthetics"
+        }
+      ]
+    },
+    "DB00575": {
+      "name": "Clonidine",
+      "rxcui": "2599",
+      "atc_classes": [
+        {
+          "code": "C02AC",
+          "name": "Imidazoline receptor agonists"
+        },
+        {
+          "code": "N02CX",
+          "name": "Other antimigraine preparations"
+        },
+        {
+          "code": "S01EA",
+          "name": "Sympathomimetics in glaucoma therapy"
+        }
+      ]
+    },
+    "DB08904": {
+      "name": "Certolizumab pegol",
+      "rxcui": "709271",
+      "atc_classes": [
+        {
+          "code": "L04AB",
+          "name": "Tumor necrosis factor alpha (TNF-alpha) inhibitors"
+        }
+      ]
+    },
+    "DB00334": {
+      "name": "Olanzapine",
+      "rxcui": "61381",
+      "atc_classes": [
+        {
+          "code": "N05AH",
+          "name": "Diazepines, oxazepines, thiazepines and oxepines"
+        }
+      ]
+    },
+    "DB00794": {
+      "name": "Primidone",
+      "rxcui": "8691",
+      "atc_classes": [
+        {
+          "code": "N03AA",
+          "name": "Barbiturates and derivatives"
+        }
+      ]
+    },
+    "DB00206": {
+      "name": "Reserpine",
+      "rxcui": "9260",
+      "atc_classes": [
+        {
+          "code": "C02AA",
+          "name": "Rauwolfia alkaloids"
+        }
+      ]
+    },
+    "DB00490": {
+      "name": "Buspirone",
+      "rxcui": "1827",
+      "atc_classes": [
+        {
+          "code": "N05BE",
+          "name": "Azaspirodecanedione derivatives"
+        }
+      ]
+    },
+    "DB00533": {
+      "name": "Rofecoxib",
+      "rxcui": "232158",
+      "atc_classes": [
+        {
+          "code": "M01AH",
+          "name": "Coxibs"
+        }
+      ]
+    },
+    "DB00598": {
+      "name": "Labetalol",
+      "rxcui": "6185",
+      "atc_classes": [
+        {
+          "code": "C07AG",
+          "name": "Alpha and beta blocking agents"
+        }
+      ]
+    },
+    "DB00586": {
+      "name": "Diclofenac",
+      "rxcui": "3355",
+      "atc_classes": [
+        {
+          "code": "D11AX",
+          "name": "Other dermatologicals"
+        },
+        {
+          "code": "M01AB",
+          "name": "Acetic acid derivatives and related substances"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        },
+        {
+          "code": "S01BC",
+          "name": "Antiinflammatory agents, non-steroids"
+        }
+      ]
+    },
+    "DB01221": {
+      "name": "Ketamine",
+      "rxcui": "6130",
+      "atc_classes": [
+        {
+          "code": "N01AX",
+          "name": "Other general anesthetics"
+        }
+      ]
+    },
+    "DB01628": {
+      "name": "Etoricoxib",
+      "rxcui": "307296",
+      "atc_classes": [
+        {
+          "code": "M01AH",
+          "name": "Coxibs"
+        }
+      ]
+    },
+    "DB01072": {
+      "name": "Atazanavir",
+      "rxcui": "343047",
+      "atc_classes": [
+        {
+          "code": "J05AR",
+          "name": "Antivirals for treatment of HIV infections, combinations"
+        },
+        {
+          "code": "J05AE",
+          "name": "Protease inhibitors"
+        }
+      ]
+    },
+    "DB00813": {
+      "name": "Fentanyl",
+      "rxcui": "4337",
+      "atc_classes": [
+        {
+          "code": "N01AH",
+          "name": "Opioid anesthetics"
+        },
+        {
+          "code": "N02AB",
+          "name": "Phenylpiperidine derivatives"
+        }
+      ]
+    },
+    "DB00343": {
+      "name": "Diltiazem",
+      "rxcui": "3443",
+      "atc_classes": [
+        {
+          "code": "C05AE",
+          "name": "Muscle relaxants"
+        },
+        {
+          "code": "C08DB",
+          "name": "Benzothiazepine derivatives"
+        }
+      ]
+    },
+    "DB00349": {
+      "name": "Clobazam",
+      "rxcui": "21241",
+      "atc_classes": [
+        {
+          "code": "N05BA",
+          "name": "Benzodiazepine derivatives"
+        }
+      ]
+    },
+    "DB01601": {
+      "name": "Lopinavir",
+      "rxcui": "195088",
+      "atc_classes": [
+        {
+          "code": "J05AR",
+          "name": "Antivirals for treatment of HIV infections, combinations"
+        }
+      ]
+    },
+    "DB01424": {
+      "name": "Aminophenazone",
+      "rxcui": "695",
+      "atc_classes": [
+        {
+          "code": "N02BB",
+          "name": "Pyrazolones"
+        }
+      ]
+    },
+    "DB04743": {
+      "name": "Nimesulide",
+      "rxcui": "53694",
+      "atc_classes": [
+        {
+          "code": "M01AX",
+          "name": "Other antiinflammatory and antirheumatic agents, non-steroids"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        }
+      ]
+    },
+    "DB00454": {
+      "name": "Meperidine",
+      "rxcui": "6754",
+      "atc_classes": [
+        {
+          "code": "N02AB",
+          "name": "Phenylpiperidine derivatives"
+        }
+      ]
+    },
+    "DB01037": {
+      "name": "Selegiline",
+      "rxcui": "9639",
+      "atc_classes": [
+        {
+          "code": "N04BD",
+          "name": "Monoamine oxidase B inhibitors"
+        }
+      ]
+    },
+    "DB00543": {
+      "name": "Amoxapine",
+      "rxcui": "722",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00808": {
+      "name": "Indapamide",
+      "rxcui": "5764",
+      "atc_classes": [
+        {
+          "code": "C03BA",
+          "name": "Sulfonamides, plain"
+        }
+      ]
+    },
+    "DB09061": {
+      "name": "Cannabidiol",
+      "rxcui": "2045371",
+      "atc_classes": [
+        {
+          "code": "N03AX",
+          "name": "Other antiepileptics"
+        }
+      ]
+    },
+    "DB00715": {
+      "name": "Paroxetine",
+      "rxcui": "32937",
+      "atc_classes": [
+        {
+          "code": "N06AB",
+          "name": "Selective serotonin reuptake inhibitors"
+        }
+      ]
+    },
+    "DB00683": {
+      "name": "Midazolam",
+      "rxcui": "6960",
+      "atc_classes": [
+        {
+          "code": "N05CD",
+          "name": "Benzodiazepine derivatives"
+        }
+      ]
+    },
+    "DB00918": {
+      "name": "Almotriptan",
+      "rxcui": "279645",
+      "atc_classes": [
+        {
+          "code": "N02CC",
+          "name": "Selective serotonin (5HT1) agonists"
+        }
+      ]
+    },
+    "DB00347": {
+      "name": "Trimethadione",
+      "rxcui": "10827",
+      "atc_classes": [
+        {
+          "code": "N03AC",
+          "name": "Oxazolidine derivatives"
+        }
+      ]
+    },
+    "DB00588": {
+      "name": "Fluticasone propionate",
+      "rxcui": "50121",
+      "atc_classes": [
+        {
+          "code": "R03AK",
+          "name": "Adrenergics in combination with corticosteroids or other drugs, excl. anticholinergics"
+        },
+        {
+          "code": "D07AC",
+          "name": "Corticosteroids, potent (group III)"
+        },
+        {
+          "code": "R01AD",
+          "name": "Corticosteroids"
+        },
+        {
+          "code": "R03BA",
+          "name": "Glucocorticoids"
+        }
+      ]
+    },
+    "DB00951": {
+      "name": "Isoniazid",
+      "rxcui": "6038",
+      "atc_classes": [
+        {
+          "code": "J04AM",
+          "name": "Combinations of drugs for treatment of tuberculosis"
+        },
+        {
+          "code": "J04AC",
+          "name": "Hydrazides"
+        }
+      ]
+    },
+    "DB00230": {
+      "name": "Pregabalin",
+      "rxcui": "187832",
+      "atc_classes": [
+        {
+          "code": "N02BF",
+          "name": "Gabapentinoids"
+        }
+      ]
+    },
+    "DB00633": {
+      "name": "Dexmedetomidine",
+      "rxcui": "48937",
+      "atc_classes": [
+        {
+          "code": "N05CM",
+          "name": "Other hypnotics and sedatives"
+        }
+      ]
+    },
+    "DB00788": {
+      "name": "Naproxen",
+      "rxcui": "7258",
+      "atc_classes": [
+        {
+          "code": "M01AE",
+          "name": "Propionic acid derivatives"
+        },
+        {
+          "code": "G02CC",
+          "name": "Antiinflammatory products for vaginal administration"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        },
+        {
+          "code": "N02CC",
+          "name": "Selective serotonin (5HT1) agonists"
+        }
+      ]
+    },
+    "DB01041": {
+      "name": "Thalidomide",
+      "rxcui": "10432",
+      "atc_classes": [
+        {
+          "code": "L04AX",
+          "name": "Other immunosuppressants"
+        }
+      ]
+    },
+    "DB01403": {
+      "name": "Methotrimeprazine",
+      "rxcui": "6852",
+      "atc_classes": [
+        {
+          "code": "N05AA",
+          "name": "Phenothiazines with aliphatic side-chain"
+        }
+      ]
+    },
+    "DB00527": {
+      "name": "Cinchocaine",
+      "rxcui": "3339",
+      "atc_classes": [
+        {
+          "code": "C05AD",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "D04AB",
+          "name": "Anesthetics for topical use"
+        },
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        },
+        {
+          "code": "S01HA",
+          "name": "Local anesthetics"
+        },
+        {
+          "code": "S02DA",
+          "name": "Analgesics and anesthetics"
+        }
+      ]
+    },
+    "DB01320": {
+      "name": "Fosphenytoin",
+      "rxcui": "72236",
+      "atc_classes": [
+        {
+          "code": "N03AB",
+          "name": "Hydantoin derivatives"
+        }
+      ]
+    },
+    "DB00829": {
+      "name": "Diazepam",
+      "rxcui": "3322",
+      "atc_classes": [
+        {
+          "code": "N05BA",
+          "name": "Benzodiazepine derivatives"
+        }
+      ]
+    },
+    "DB01169": {
+      "name": "Arsenic trioxide",
+      "rxcui": "18330",
+      "atc_classes": [
+        {
+          "code": "L01XX",
+          "name": "Other antineoplastic agents"
+        }
+      ]
+    },
+    "DB00563": {
+      "name": "Methotrexate",
+      "rxcui": "6851",
+      "atc_classes": [
+        {
+          "code": "L01BA",
+          "name": "Folic acid analogues"
+        },
+        {
+          "code": "L04AX",
+          "name": "Other immunosuppressants"
+        }
+      ]
+    },
+    "DB04841": {
+      "name": "Flunarizine",
+      "rxcui": "4459",
+      "atc_classes": [
+        {
+          "code": "N07CA",
+          "name": "Antivertigo preparations"
+        }
+      ]
+    },
+    "DB00669": {
+      "name": "Sumatriptan",
+      "rxcui": "37418",
+      "atc_classes": [
+        {
+          "code": "N02CC",
+          "name": "Selective serotonin (5HT1) agonists"
+        }
+      ]
+    },
+    "DB01161": {
+      "name": "Chloroprocaine",
+      "rxcui": "20859",
+      "atc_classes": [
+        {
+          "code": "N01BA",
+          "name": "Esters of aminobenzoic acid"
+        },
+        {
+          "code": "S01HA",
+          "name": "Local anesthetics"
+        }
+      ]
+    },
+    "DB11642": {
+      "name": "Pitolisant",
+      "rxcui": "2197878",
+      "atc_classes": [
+        {
+          "code": "N07XX",
+          "name": "Other nervous system drugs"
+        }
+      ]
+    },
+    "DB09071": {
+      "name": "Tasimelteon",
+      "rxcui": "1490468",
+      "atc_classes": [
+        {
+          "code": "N05CH",
+          "name": "Melatonin receptor agonists"
+        }
+      ]
+    },
+    "DB06712": {
+      "name": "Nilvadipine",
+      "rxcui": "53692",
+      "atc_classes": [
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB01018": {
+      "name": "Guanfacine",
+      "rxcui": "40114",
+      "atc_classes": [
+        {
+          "code": "C02AC",
+          "name": "Imidazoline receptor agonists"
+        }
+      ]
+    },
+    "DB00656": {
+      "name": "Trazodone",
+      "rxcui": "10737",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB00780": {
+      "name": "Phenelzine",
+      "rxcui": "8123",
+      "atc_classes": [
+        {
+          "code": "N06AF",
+          "name": "Monoamine oxidase inhibitors, non-selective"
+        }
+      ]
+    },
+    "DB00286": {
+      "name": "Conjugated estrogens",
+      "rxcui": "4099",
+      "atc_classes": [
+        {
+          "code": "G03CC",
+          "name": "Estrogens, combinations with other drugs"
+        },
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        }
+      ]
+    },
+    "DB01624": {
+      "name": "Zuclopenthixol",
+      "rxcui": "114176",
+      "atc_classes": [
+        {
+          "code": "N05AF",
+          "name": "Thioxanthene derivatives"
+        }
+      ]
+    },
+    "DB00734": {
+      "name": "Risperidone",
+      "rxcui": "35636",
+      "atc_classes": [
+        {
+          "code": "N05AX",
+          "name": "Other antipsychotics"
+        }
+      ]
+    },
+    "DB09167": {
+      "name": "Dosulepin",
+      "rxcui": "3634",
+      "atc_classes": [
+        {
+          "code": "N06AA",
+          "name": "Non-selective monoamine reuptake inhibitors"
+        }
+      ]
+    },
+    "DB04920": {
+      "name": "Clevidipine",
+      "rxcui": "233603",
+      "atc_classes": [
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB01418": {
+      "name": "Acenocoumarol",
+      "rxcui": "154",
+      "atc_classes": [
+        {
+          "code": "B01AA",
+          "name": "Vitamin K antagonists"
+        }
+      ]
+    },
+    "DB01181": {
+      "name": "Ifosfamide",
+      "rxcui": "5657",
+      "atc_classes": [
+        {
+          "code": "L01AA",
+          "name": "Nitrogen mustard analogues"
+        }
+      ]
+    },
+    "DB00696": {
+      "name": "Ergotamine",
+      "rxcui": "4025",
+      "atc_classes": [
+        {
+          "code": "N02CA",
+          "name": "Ergot alkaloids"
+        }
+      ]
+    },
+    "DB00612": {
+      "name": "Bisoprolol",
+      "rxcui": "19484",
+      "atc_classes": [
+        {
+          "code": "C07AB",
+          "name": "Beta blocking agents, selective"
+        }
+      ]
+    },
+    "DB01136": {
+      "name": "Carvedilol",
+      "rxcui": "20352",
+      "atc_classes": [
+        {
+          "code": "C07AG",
+          "name": "Alpha and beta blocking agents"
+        }
+      ]
+    },
+    "DB08893": {
+      "name": "Mirabegron",
+      "rxcui": "1300786",
+      "atc_classes": [
+        {
+          "code": "G04BD",
+          "name": "Drugs for urinary frequency and incontinence"
+        }
+      ]
+    },
+    "DB09245": {
+      "name": "Toloxatone",
+      "rxcui": "38382",
+      "atc_classes": [
+        {
+          "code": "N06AG",
+          "name": "Monoamine oxidase A inhibitors"
+        }
+      ]
+    },
+    "DB00818": {
+      "name": "Propofol",
+      "rxcui": "8782",
+      "atc_classes": [
+        {
+          "code": "N01AX",
+          "name": "Other general anesthetics"
+        }
+      ]
+    },
+    "DB09289": {
+      "name": "Tianeptine",
+      "rxcui": "38252",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB09089": {
+      "name": "Trimebutine",
+      "rxcui": "10819",
+      "atc_classes": [
+        {
+          "code": "A03AA",
+          "name": "Synthetic anticholinergics, esters with tertiary amino group"
+        }
+      ]
+    },
+    "DB01234": {
+      "name": "Dexamethasone",
+      "rxcui": "3264",
+      "atc_classes": [
+        {
+          "code": "A01AC",
+          "name": "Corticosteroids for local oral treatment"
+        },
+        {
+          "code": "C05AA",
+          "name": "Corticosteroids"
+        },
+        {
+          "code": "D07AB",
+          "name": "Corticosteroids, moderately potent (group II)"
+        },
+        {
+          "code": "D07XB",
+          "name": "Corticosteroids, moderately potent, other combinations"
+        },
+        {
+          "code": "D10AA",
+          "name": "Corticosteroids, combinations for treatment of acne"
+        },
+        {
+          "code": "H02AB",
+          "name": "Glucocorticoids"
+        },
+        {
+          "code": "R01AD",
+          "name": "Corticosteroids"
+        },
+        {
+          "code": "S01BA",
+          "name": "Corticosteroids, plain"
+        },
+        {
+          "code": "S01CB",
+          "name": "Corticosteroids/antiinfectives/mydriatics in combination"
+        },
+        {
+          "code": "S02BA",
+          "name": "Corticosteroids"
+        },
+        {
+          "code": "S03BA",
+          "name": "Corticosteroids"
+        }
+      ]
+    },
+    "DB01175": {
+      "name": "Escitalopram",
+      "rxcui": "321988",
+      "atc_classes": [
+        {
+          "code": "N06AB",
+          "name": "Selective serotonin reuptake inhibitors"
+        }
+      ]
+    },
+    "DB06216": {
+      "name": "Asenapine",
+      "rxcui": "784649",
+      "atc_classes": [
+        {
+          "code": "N05AH",
+          "name": "Diazepines, oxazepines, thiazepines and oxepines"
+        }
+      ]
+    },
+    "DB00313": {
+      "name": "Valproic acid",
+      "rxcui": "11118",
+      "atc_classes": [
+        {
+          "code": "N03AG",
+          "name": "Fatty acid derivatives"
+        }
+      ]
+    },
+    "DB04946": {
+      "name": "Iloperidone",
+      "rxcui": "73178",
+      "atc_classes": [
+        {
+          "code": "N05AX",
+          "name": "Other antipsychotics"
+        }
+      ]
+    },
+    "DB01200": {
+      "name": "Bromocriptine",
+      "rxcui": "1760",
+      "atc_classes": [
+        {
+          "code": "G02CB",
+          "name": "Prolactine inhibitors"
+        },
+        {
+          "code": "N04BC",
+          "name": "Dopamine agonists"
+        }
+      ]
+    },
+    "DB00625": {
+      "name": "Efavirenz",
+      "rxcui": "195085",
+      "atc_classes": [
+        {
+          "code": "J05AR",
+          "name": "Antivirals for treatment of HIV infections, combinations"
+        },
+        {
+          "code": "J05AG",
+          "name": "Non-nucleoside reverse transcriptase inhibitors"
+        }
+      ]
+    },
+    "DB00264": {
+      "name": "Metoprolol",
+      "rxcui": "6918",
+      "atc_classes": [
+        {
+          "code": "C07FB",
+          "name": "Beta blocking agents and calcium channel blockers"
+        },
+        {
+          "code": "C07AB",
+          "name": "Beta blocking agents, selective"
+        }
+      ]
+    },
+    "DB00738": {
+      "name": "Pentamidine",
+      "rxcui": "7994",
+      "atc_classes": [
+        {
+          "code": "P01CX",
+          "name": "Other agents against leishmaniasis and trypanosomiasis"
+        }
+      ]
+    },
+    "DB01222": {
+      "name": "Budesonide",
+      "rxcui": "19831",
+      "atc_classes": [
+        {
+          "code": "A07EA",
+          "name": "Corticosteroids acting locally"
+        },
+        {
+          "code": "D07AC",
+          "name": "Corticosteroids, potent (group III)"
+        },
+        {
+          "code": "R01AD",
+          "name": "Corticosteroids"
+        },
+        {
+          "code": "R03BA",
+          "name": "Glucocorticoids"
+        },
+        {
+          "code": "R03AK",
+          "name": "Adrenergics in combination with corticosteroids or other drugs, excl. anticholinergics"
+        }
+      ]
+    },
+    "DB04871": {
+      "name": "Lorcaserin",
+      "rxcui": "1300701",
+      "atc_classes": [
+        {
+          "code": "A08AA",
+          "name": "Centrally acting antiobesity products"
+        }
+      ]
+    },
+    "DB00436": {
+      "name": "Bendroflumethiazide",
+      "rxcui": "1369",
+      "atc_classes": [
+        {
+          "code": "C03AA",
+          "name": "Thiazides, plain"
+        },
+        {
+          "code": "C03AB",
+          "name": "Thiazides and potassium in combination"
+        }
+      ]
+    },
+    "DB12235": {
+      "name": "Estetrol",
+      "rxcui": "2539031",
+      "atc_classes": [
+        {
+          "code": "G03CA",
+          "name": "Natural and semisynthetic estrogens, plain"
+        },
+        {
+          "code": "G03AA",
+          "name": "Progestogens and estrogens, fixed combinations"
+        }
+      ]
+    },
+    "DB00812": {
+      "name": "Phenylbutazone",
+      "rxcui": "8160",
+      "atc_classes": [
+        {
+          "code": "M01AA",
+          "name": "Butylpyrazolidines"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        }
+      ]
+    },
+    "DB00784": {
+      "name": "Mefenamic acid",
+      "rxcui": "6693",
+      "atc_classes": [
+        {
+          "code": "M01AG",
+          "name": "Fenamates"
+        }
+      ]
+    },
+    "DB09224": {
+      "name": "Melperone",
+      "rxcui": "29961",
+      "atc_classes": [
+        {
+          "code": "N05AD",
+          "name": "Butyrophenone derivatives"
+        }
+      ]
+    },
+    "DB09009": {
+      "name": "Articaine",
+      "rxcui": "592464",
+      "atc_classes": [
+        {
+          "code": "N01BB",
+          "name": "Amides"
+        }
+      ]
+    },
+    "DB01036": {
+      "name": "Tolterodine",
+      "rxcui": "119565",
+      "atc_classes": [
+        {
+          "code": "G04BD",
+          "name": "Drugs for urinary frequency and incontinence"
+        }
+      ]
+    },
+    "DB01203": {
+      "name": "Nadolol",
+      "rxcui": "7226",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB01324": {
+      "name": "Polythiazide",
+      "rxcui": "8565",
+      "atc_classes": [
+        {
+          "code": "C03AA",
+          "name": "Thiazides, plain"
+        }
+      ]
+    },
+    "DB04868": {
+      "name": "Nilotinib",
+      "rxcui": "662281",
+      "atc_classes": [
+        {
+          "code": "L01EA",
+          "name": "BCR-ABL tyrosine kinase inhibitors"
+        }
+      ]
+    },
+    "DB00461": {
+      "name": "Nabumetone",
+      "rxcui": "31448",
+      "atc_classes": [
+        {
+          "code": "M01AX",
+          "name": "Other antiinflammatory and antirheumatic agents, non-steroids"
+        }
+      ]
+    },
+    "DB00215": {
+      "name": "Citalopram",
+      "rxcui": "2556",
+      "atc_classes": [
+        {
+          "code": "N06AB",
+          "name": "Selective serotonin reuptake inhibitors"
+        }
+      ]
+    },
+    "DB04855": {
+      "name": "Dronedarone",
+      "rxcui": "233698",
+      "atc_classes": [
+        {
+          "code": "C01BD",
+          "name": "Antiarrhythmics, class III"
+        }
+      ]
+    },
+    "DB00580": {
+      "name": "Valdecoxib",
+      "rxcui": "278567",
+      "atc_classes": [
+        {
+          "code": "M01AH",
+          "name": "Coxibs"
+        }
+      ]
+    },
+    "DB01580": {
+      "name": "Oxprenolol",
+      "rxcui": "7801",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB01105": {
+      "name": "Sibutramine",
+      "rxcui": "36514",
+      "atc_classes": [
+        {
+          "code": "A08AA",
+          "name": "Centrally acting antiobesity products"
+        }
+      ]
+    },
+    "DB00182": {
+      "name": "Amphetamine",
+      "rxcui": "725",
+      "atc_classes": [
+        {
+          "code": "N06BA",
+          "name": "Centrally acting sympathomimetics"
+        }
+      ]
+    },
+    "DB00936": {
+      "name": "Salicylic acid",
+      "rxcui": "9525",
+      "atc_classes": [
+        {
+          "code": "N02BA",
+          "name": "Salicylic acid and derivatives"
+        },
+        {
+          "code": "D01AE",
+          "name": "Other antifungals for topical use"
+        },
+        {
+          "code": "S01BC",
+          "name": "Antiinflammatory agents, non-steroids"
+        }
+      ]
+    },
+    "DB00866": {
+      "name": "Alprenolol",
+      "rxcui": "597",
+      "atc_classes": [
+        {
+          "code": "C07AA",
+          "name": "Beta blocking agents, non-selective"
+        }
+      ]
+    },
+    "DB00401": {
+      "name": "Nisoldipine",
+      "rxcui": "7435",
+      "atc_classes": [
+        {
+          "code": "C08CA",
+          "name": "Dihydropyridine derivatives"
+        }
+      ]
+    },
+    "DB00554": {
+      "name": "Piroxicam",
+      "rxcui": "8356",
+      "atc_classes": [
+        {
+          "code": "M01AC",
+          "name": "Oxicams"
+        },
+        {
+          "code": "M02AA",
+          "name": "Antiinflammatory preparations, non-steroids for topical use"
+        },
+        {
+          "code": "S01BC",
+          "name": "Antiinflammatory agents, non-steroids"
+        }
+      ]
+    },
+    "DB00356": {
+      "name": "Chlorzoxazone",
+      "rxcui": "2410",
+      "atc_classes": [
+        {
+          "code": "M03BB",
+          "name": "Oxazol, thiazine, and triazine derivatives"
+        }
+      ]
+    },
+    "DB00880": {
+      "name": "Chlorothiazide",
+      "rxcui": "2396",
+      "atc_classes": [
+        {
+          "code": "C03AA",
+          "name": "Thiazides, plain"
+        }
+      ]
+    },
+    "DB00980": {
+      "name": "Ramelteon",
+      "rxcui": "596205",
+      "atc_classes": [
+        {
+          "code": "N05CH",
+          "name": "Melatonin receptor agonists"
+        }
+      ]
+    },
+    "DB00370": {
+      "name": "Mirtazapine",
+      "rxcui": "15996",
+      "atc_classes": [
+        {
+          "code": "N06AX",
+          "name": "Other antidepressants"
+        }
+      ]
+    },
+    "DB08877": {
+      "name": "Ruxolitinib",
+      "rxcui": "1193326",
+      "atc_classes": [
+        {
+          "code": "D11AH",
+          "name": "Agents for dermatitis, excluding corticosteroids"
+        },
+        {
+          "code": "L01EJ",
+          "name": "Janus-associated kinase (JAK) inhibitors"
+        }
+      ]
+    },
+    "DB00946": {
+      "name": "Phenprocoumon",
+      "rxcui": "8150",
+      "atc_classes": [
+        {
+          "code": "B01AA",
+          "name": "Vitamin K antagonists"
+        }
+      ]
+    },
+    "DB00679": {
+      "name": "Thioridazine",
+      "rxcui": "10502",
+      "atc_classes": [
+        {
+          "code": "N05AC",
+          "name": "Phenothiazines with piperidine structure"
+        }
+      ]
+    },
+    "DB11130": {
+      "name": "Opium",
+      "rxcui": "7676",
+      "atc_classes": [
+        {
+          "code": "A07DA",
+          "name": "Antipropulsives"
+        },
+        {
+          "code": "N02AA",
+          "name": "Natural opium alkaloids"
+        }
+      ]
+    },
+    "DB05541": {
+      "name": "Brivaracetam",
+      "rxcui": "1739745",
+      "atc_classes": [
+        {
+          "code": "N03AX",
+          "name": "Other antiepileptics"
+        }
+      ]
+    }
+  }
+}

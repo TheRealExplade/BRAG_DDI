@@ -175,6 +175,15 @@ if get_overlay_meta():
     warn("enzyme/transporter data is a HAND-CURATED DEMO SEED",
          f"{overlay_drugs} drugs only -- replace with a real DrugBank export before clinical use")
 
+from rag.graph import get_rxclass_meta
+
+atc_drugs = sum(1 for d in merged if d.get("atc_classes"))
+if atc_drugs > 0:
+    check("RxClass ATC data merged", True, f"{atc_drugs} drugs classified")
+else:
+    warn("no RxClass ATC data present",
+         "run: python rag/fetch/fetch_rxclass.py --insecure")
+
 # unknown node_type would silently break query_graph's filtering
 unknown_types = type_counts.get("unknown", 0)
 check("no untyped nodes", unknown_types == 0, f"{unknown_types} untyped")
@@ -203,6 +212,21 @@ for name, should_resolve in resolution_cases:
 check("aspirin and acetylsalicylic acid resolve identically",
       resolve_drug_id(lookup, "aspirin") == resolve_drug_id(lookup, "acetylsalicylic acid"))
 
+# Fetched RxNorm brand names (rag/fetch/fetch_rxnorm_aliases.py), merged
+# directly into the lookup table -- distinct from the 7 hand-typed
+# COMMON_ALIASES entries. "jantoven" specifically was NOT hand-typed, so
+# this only passes if the fetched data is actually wired in.
+from rag.graph import load_rxnorm_aliases
+
+rxnorm_aliases = load_rxnorm_aliases()
+if rxnorm_aliases:
+    check("RxNorm brand names loaded", len(rxnorm_aliases) > 0, f"{len(rxnorm_aliases)} drugs")
+    check("fetched brand name 'jantoven' resolves to warfarin",
+          resolve_drug_id(lookup, "jantoven") == resolve_drug_id(lookup, "warfarin"))
+else:
+    warn("no RxNorm brand-name data present",
+         "run: python rag/fetch/fetch_rxnorm_aliases.py --insecure")
+
 
 # ----------------------------------------------------------------------
 section("5. VECTOR RAG DB INTEGRITY")
@@ -225,8 +249,24 @@ check("chroma collection exists", "langchain" in collections, f"collections={col
 
 if "langchain" in collections:
     coll = client.get_collection("langchain")
-    got = coll.get(include=["documents", "metadatas"])
-    docs, metas = got["documents"], got["metadatas"]
+
+    # coll.get() with no limit tries to bind one SQL variable per cell in
+    # one statement -- fine at a few thousand rows, but SQLite has a bound-
+    # variable ceiling that a corpus this size (33k+ docs) exceeds outright
+    # ("too many SQL variables"). The real pipeline never does this (search
+    # only ever fetches k=5), but this integrity check wants every row, so
+    # it has to page through instead of one unbounded fetch.
+    docs, metas = [], []
+    page = 5000
+    offset = 0
+    while True:
+        got = coll.get(include=["documents", "metadatas"], limit=page, offset=offset)
+        batch = got["documents"]
+        if not batch:
+            break
+        docs.extend(batch)
+        metas.extend(got["metadatas"])
+        offset += page
 
     print(f"  DB holds {len(docs)} documents ({len(set(docs))} unique)")
 
@@ -390,6 +430,16 @@ pd_enz = (rep_pd["mechanistic_overlaps"][0]["shared_enzymes"]
           if rep_pd["mechanistic_overlaps"] else [])
 check("PK/ no fabricated enzyme overlap for warfarin+aspirin", pd_enz == [],
       f"{[e['name'] for e in pd_enz]}")
+
+# --- case F: RxClass ATC classification (context only, not interaction evidence) ---
+atc_a = rep_pd["per_drug_profile"]["DB00682"].get("atc_classes", [])
+atc_b = rep_pd["per_drug_profile"]["DB00945"].get("atc_classes", [])
+check("F/ warfarin has an ATC class", any(c["code"] == "B01AA" for c in atc_a),
+      f"{[c['code'] for c in atc_a]}")
+check("F/ aspirin has an ATC class", any(c["code"] == "B01AC" for c in atc_b),
+      f"{[c['code'] for c in atc_b]}")
+check("F/ ATC classes appear in prompt-facing text",
+      "DRUG CLASSES (ATC" in format_mechanism_report(rep_pd))
 
 # --- case C: unresolved drug ---
 rep_c = build_mechanism_report(G, lookup, "warfarin", "totallyfakedrugxyz")

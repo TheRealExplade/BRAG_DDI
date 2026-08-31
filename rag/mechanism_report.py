@@ -62,6 +62,12 @@ def _drug_profile(drug_id, G=None):
         "pathways": drug.get("pathways", []),
     }
 
+    # ATC classification (RxClass) -- drug CLASS, not mechanism. Context for
+    # the LLM/pharmacist, not currently used in the shared-entity reasoning
+    # below (that's still purely enzyme/target/transporter/pathway based).
+    if drug.get("atc_classes"):
+        profile["atc_classes"] = drug["atc_classes"]
+
     # Carry provenance through so the report can disclose which fields came
     # from the hand-curated overlay rather than the DrugBank export.
     if drug.get("_overlay_fields"):
@@ -250,6 +256,16 @@ def format_mechanism_report(report):
         return "Could not resolve in DrugBank graph: " + ", ".join(report["unresolved_inputs"])
 
     lines = []
+
+    atc_lines = []
+    for drug_id, profile in report["per_drug_profile"].items():
+        if profile.get("atc_classes"):
+            names = ", ".join(f"{c['name']} ({c['code']})" for c in profile["atc_classes"][:3])
+            atc_lines.append(f"- {profile['name']}: {names}")
+    if atc_lines:
+        lines.append("DRUG CLASSES (ATC, context only -- not interaction evidence):")
+        lines.extend(atc_lines)
+        lines.append("")
 
     if report.get("reference_severity"):
         ref = report["reference_severity"]

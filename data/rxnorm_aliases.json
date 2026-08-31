@@ -1,0 +1,1558 @@
+{
+  "_meta": {
+    "source": "RxNorm (rxnav.nlm.nih.gov), NLM, free/public, no key required",
+    "purpose": "Brand-name synonyms merged directly into the name->drug_id lookup table (rag.graph.build_name_lookup), not a separate alias-resolution step",
+    "keyed_by": "this project's own DrugBank drug_id",
+    "entry_count": 151
+  },
+  "drugs": {
+    "DB00682": {
+      "canonical_name": "Warfarin",
+      "brand_names": [
+        "Coumadin",
+        "Jantoven"
+      ]
+    },
+    "DB00945": {
+      "canonical_name": "Acetylsalicylic acid",
+      "brand_names": [
+        "Alka-Seltzer",
+        "Anacin",
+        "Anacin Advanced Headache Formula",
+        "Anacin Aspirin Regimen",
+        "Arthriten Inflammatory Pain",
+        "Ascomp",
+        "Aspergum",
+        "Aspi-Cor",
+        "BC Arthritis",
+        "BC Original Formula",
+        "Backaid IPF",
+        "Bayer Aspirin",
+        "Bromo Seltzer Antacid Pain Reliever",
+        "Bufferin",
+        "Durlaza",
+        "Ecotrin",
+        "Equagesic",
+        "Exaprin",
+        "Exaprin Plus",
+        "Excedrin",
+        "Excedrin PM Triple Action",
+        "Miniprin",
+        "Norgesic",
+        "Norwich Aspirin",
+        "Orphengesic",
+        "Pamprin Max Formula",
+        "Saleto",
+        "St. Joseph Aspirin",
+        "Stanback Headache Powder Reformulated Jan 2011",
+        "Vanquish",
+        "Vazalore",
+        "Yosprala"
+      ]
+    },
+    "DB00196": {
+      "canonical_name": "Fluconazole",
+      "brand_names": [
+        "Diflucan"
+      ]
+    },
+    "DB01045": {
+      "canonical_name": "Rifampin",
+      "brand_names": [
+        "Rifadin"
+      ]
+    },
+    "DB00641": {
+      "canonical_name": "Simvastatin",
+      "brand_names": [
+        "Flolipid",
+        "Vytorin",
+        "Zocor"
+      ]
+    },
+    "DB01076": {
+      "canonical_name": "Atorvastatin",
+      "brand_names": [
+        "Atorvaliq",
+        "Caduet",
+        "Lipitor"
+      ]
+    },
+    "DB01026": {
+      "canonical_name": "Ketoconazole",
+      "brand_names": [
+        "Extina",
+        "Keto-C",
+        "Ketochlor",
+        "Ketodan",
+        "Kuric",
+        "Mal-A-Ket",
+        "Mal-A-Ket Wipes",
+        "Malacetic",
+        "Nizoral",
+        "Recorlev",
+        "Suffusion",
+        "T8 Keto Flush",
+        "Xolegel"
+      ]
+    },
+    "DB01211": {
+      "canonical_name": "Clarithromycin",
+      "brand_names": [
+        "Biaxin"
+      ]
+    },
+    "DB00390": {
+      "canonical_name": "Digoxin",
+      "brand_names": [
+        "Digitek",
+        "Digox",
+        "Lanoxin"
+      ]
+    },
+    "DB00908": {
+      "canonical_name": "Quinidine",
+      "brand_names": [
+        "Nuedexta"
+      ]
+    },
+    "DB01118": {
+      "canonical_name": "Amiodarone",
+      "brand_names": [
+        "Nexterone",
+        "Pacerone"
+      ]
+    },
+    "DB00338": {
+      "canonical_name": "Omeprazole",
+      "brand_names": [
+        "Gastrobim",
+        "Konvomep",
+        "Prilosec",
+        "Primeguard",
+        "Talicia",
+        "UlcerGard",
+        "Yosprala",
+        "Zegerid Reformulated Aug 2006"
+      ]
+    },
+    "DB00758": {
+      "canonical_name": "Clopidogrel",
+      "brand_names": [
+        "Plavix"
+      ]
+    },
+    "DB01050": {
+      "canonical_name": "Ibuprofen",
+      "brand_names": [
+        "Addaprin",
+        "Advil",
+        "Caldolor",
+        "Combogesic",
+        "Counteract IB",
+        "Duexis",
+        "Genpril",
+        "Ibu",
+        "Ibudone",
+        "Ibuprohm",
+        "Motrin",
+        "Motrin PM",
+        "Neoprofen",
+        "Proprinal",
+        "Reprexain",
+        "Samson 8",
+        "Vicoprofen",
+        "Wal-Profen"
+      ]
+    },
+    "DB00363": {
+      "canonical_name": "Clozapine",
+      "brand_names": [
+        "Clozaril",
+        "Versacloz"
+      ]
+    },
+    "DB00321": {
+      "canonical_name": "Amitriptyline",
+      "brand_names": [
+        "Elavil"
+      ]
+    },
+    "DB00564": {
+      "canonical_name": "Carbamazepine",
+      "brand_names": [
+        "Carbatrol",
+        "Epitol",
+        "Equetro",
+        "Tegretol"
+      ]
+    },
+    "DB00814": {
+      "canonical_name": "Meloxicam",
+      "brand_names": [
+        "Alloxate",
+        "Anjeso",
+        "Loxicom",
+        "Meloxidyl",
+        "Meloxivet",
+        "Metacam",
+        "Mobic",
+        "Ostilox",
+        "Qamzova",
+        "Qmiiz",
+        "Symbravo",
+        "Vivlodex",
+        "Xifyrm",
+        "Zybic",
+        "Zynrelef"
+      ]
+    },
+    "DB01142": {
+      "canonical_name": "Doxepin",
+      "brand_names": [
+        "Prudoxin",
+        "Silenor",
+        "Zonalon"
+      ]
+    },
+    "DB00091": {
+      "canonical_name": "Cyclosporine",
+      "brand_names": [
+        "Atopica",
+        "Cequa",
+        "Cyclavance",
+        "Gengraf",
+        "Modulis",
+        "Neoral",
+        "Optimmune",
+        "Restasis",
+        "Sandimmune",
+        "Sporimune",
+        "Verkazia",
+        "Vevye"
+      ]
+    },
+    "DB01242": {
+      "canonical_name": "Clomipramine",
+      "brand_names": [
+        "Anafranil",
+        "Calmera",
+        "Caniquell",
+        "Clomicalm"
+      ]
+    },
+    "DB00296": {
+      "canonical_name": "Ropivacaine",
+      "brand_names": [
+        "Naropin"
+      ]
+    },
+    "DB00502": {
+      "canonical_name": "Haloperidol",
+      "brand_names": [
+        "Haldol"
+      ]
+    },
+    "DB09241": {
+      "canonical_name": "Methylene blue",
+      "brand_names": [
+        "Hyophen",
+        "Phosphasal",
+        "Prosed DS",
+        "Provayblue",
+        "Urelle",
+        "Uretron DS",
+        "Uribel",
+        "Uribel Tabs",
+        "Urimar Reformulated Oct 2013",
+        "Urin DS",
+        "Uro-Blue",
+        "Urogesic Blue Reformulated Apr 2012",
+        "Ustell",
+        "Utira"
+      ]
+    },
+    "DB01075": {
+      "canonical_name": "Diphenhydramine",
+      "brand_names": [
+        "Acetadryl",
+        "Aleve PM",
+        "Banophen",
+        "Banophen Cream",
+        "Benadryl",
+        "Benadryl Allergy Plus Congestion",
+        "Benadryl Itch Stopping",
+        "Benadryl-D Allergy and Sinus",
+        "Buckley's Bedtime Formula",
+        "Calagel",
+        "Calagel Reformulated Jun 2019",
+        "Compoz",
+        "Dermamycin",
+        "Diphedryl",
+        "Diphenhist",
+        "Doans PM",
+        "Dormin",
+        "Excedrin PM",
+        "Excedrin PM Triple Action",
+        "Genahist",
+        "Kids-Eeze Allergy",
+        "Legatrin PM",
+        "Motrin PM",
+        "Nytol",
+        "Panadol PM",
+        "Pediaclear Cough",
+        "Percogesic Reformulated Jan 2011",
+        "Rest Simply",
+        "Scot-Tussin Allergy",
+        "Siladryl",
+        "Simply Sleep",
+        "Sleep-Eze",
+        "Sleepinal",
+        "Sominex",
+        "Somnapure",
+        "Tact",
+        "The Itch Eraser",
+        "Twilite",
+        "Tylenol PM",
+        "Unisom Sleep",
+        "Unisom with Pain Relief",
+        "Vanamine",
+        "Vetadryl",
+        "Wal-Dryl",
+        "Wal-Dryl Allergy",
+        "Wal-Dryl Childrens",
+        "Wal-Dryl PE",
+        "Wal-Dryl-D",
+        "Wal-Sleep Z",
+        "Wal-Som",
+        "Wal-Som Maximum Strength",
+        "Z-Sleep",
+        "ZZZ Sleep",
+        "Zzzquil"
+      ]
+    },
+    "DB01224": {
+      "canonical_name": "Quetiapine",
+      "brand_names": [
+        "Seroquel"
+      ]
+    },
+    "DB00909": {
+      "canonical_name": "Zonisamide",
+      "brand_names": [
+        "Zonegran",
+        "Zonisade"
+      ]
+    },
+    "DB06700": {
+      "canonical_name": "Desvenlafaxine",
+      "brand_names": [
+        "Khedezla",
+        "Pristiq"
+      ]
+    },
+    "DB01151": {
+      "canonical_name": "Desipramine",
+      "brand_names": [
+        "Norpramin"
+      ]
+    },
+    "DB00468": {
+      "canonical_name": "Quinine",
+      "brand_names": [
+        "Qualaquin"
+      ]
+    },
+    "DB01267": {
+      "canonical_name": "Paliperidone",
+      "brand_names": [
+        "Erzofri",
+        "Invega"
+      ]
+    },
+    "DB04896": {
+      "canonical_name": "Milnacipran",
+      "brand_names": [
+        "Savella"
+      ]
+    },
+    "DB08910": {
+      "canonical_name": "Pomalidomide",
+      "brand_names": [
+        "Pomalyst"
+      ]
+    },
+    "DB00246": {
+      "canonical_name": "Ziprasidone",
+      "brand_names": [
+        "Geodon"
+      ]
+    },
+    "DB09118": {
+      "canonical_name": "Stiripentol",
+      "brand_names": [
+        "Diacomit"
+      ]
+    },
+    "DB00312": {
+      "canonical_name": "Pentobarbital",
+      "brand_names": [
+        "Euthaphen",
+        "Euthasol",
+        "Fatal-Plus",
+        "Nembutal",
+        "Pentobarsol"
+      ]
+    },
+    "DB00961": {
+      "canonical_name": "Mepivacaine",
+      "brand_names": [
+        "Carbocaine",
+        "Carbocaine with NeoCobefrin",
+        "Polocaine",
+        "Scandonest"
+      ]
+    },
+    "DB00540": {
+      "canonical_name": "Nortriptyline",
+      "brand_names": [
+        "Pamelor"
+      ]
+    },
+    "DB00281": {
+      "canonical_name": "Lidocaine",
+      "brand_names": [
+        "Abreva Rapid Pain Relief",
+        "Akten",
+        "Allercaine",
+        "Alocane",
+        "Alocane Max Strength",
+        "Alocane Plus",
+        "Ana-Lex",
+        "AneCream",
+        "Bactine",
+        "Bactine Antibiotic",
+        "Band-Aid Hurt-Free",
+        "Bio-Kool",
+        "Bruselix",
+        "Burn Jel Plus",
+        "Cicloferon",
+        "Comfortcaine",
+        "Cutiecaine",
+        "Derma Numb",
+        "Doloracin with Lidocaine",
+        "Dr. Numb",
+        "Flavalta",
+        "Glydo",
+        "Hexa-Caine",
+        "Keepan",
+        "Kool-Down",
+        "LMX",
+        "Lenzagel",
+        "Lenzapatch",
+        "Lido King",
+        "LidoPro",
+        "LidoPro Pain Relieving Patch",
+        "LidoPro Patch",
+        "Lidocan",
+        "Lidocare",
+        "Lidocream",
+        "Lidoderm",
+        "Lidoguard",
+        "Lidoguard Pain Relief",
+        "Lidopatch",
+        "Lidostat",
+        "Lidotral",
+        "Lidotran",
+        "Lidozen",
+        "Lidum",
+        "Lignospan",
+        "Lipocaine",
+        "Lydexa",
+        "Medi-Derm with Lidocaine",
+        "Oraqix",
+        "Pliaglis",
+        "Puroxcin",
+        "RadiaGuard",
+        "RectiCare Advance Cream",
+        "Recticare",
+        "Recticare Wipes",
+        "Regenecare",
+        "Relador",
+        "Solarcaine",
+        "Sonacaine",
+        "StaphAseptic",
+        "Synera",
+        "Topicaine",
+        "Topicaine Ultra",
+        "Tranzarel",
+        "Tridacaine",
+        "Trifena",
+        "Uber Numb",
+        "Unburn",
+        "Workvie",
+        "Xolido",
+        "Xylocaine",
+        "Xylocaine with Epinephrine",
+        "ZTlido",
+        "Zcaine",
+        "Zensa",
+        "Zingo",
+        "Zionodil"
+      ]
+    },
+    "DB00661": {
+      "canonical_name": "Verapamil",
+      "brand_names": [
+        "Calan",
+        "Isoptin",
+        "Verelan"
+      ]
+    },
+    "DB01069": {
+      "canonical_name": "Promethazine",
+      "brand_names": [
+        "Phenadoz",
+        "Phenergan",
+        "Promethegan"
+      ]
+    },
+    "DB00333": {
+      "canonical_name": "Methadone",
+      "brand_names": [
+        "Diskets",
+        "Dolophine",
+        "Methadose"
+      ]
+    },
+    "DB00783": {
+      "canonical_name": "Estradiol",
+      "brand_names": [
+        "Alora",
+        "Bijuva",
+        "Climara",
+        "Climara Pro",
+        "Combipatch",
+        "Compudose",
+        "Delestrogen",
+        "Depo-estradiol",
+        "Divigel",
+        "Dotti",
+        "Elestrin",
+        "Estrace",
+        "Estring",
+        "Estrogel",
+        "Evamist",
+        "Femring",
+        "Imvexxy",
+        "Lyllana",
+        "Menostar",
+        "Minivelle",
+        "Myfembree",
+        "Revalor",
+        "Synovex",
+        "Synovex C",
+        "Synovex H",
+        "Synovex S",
+        "Vagifem",
+        "Vivelle",
+        "Yuvafem"
+      ]
+    },
+    "DB04948": {
+      "canonical_name": "Lofexidine",
+      "brand_names": [
+        "Lucemyra"
+      ]
+    },
+    "DB13954": {
+      "canonical_name": "Estradiol cypionate",
+      "brand_names": [
+        "Depo-estradiol"
+      ]
+    },
+    "DB01233": {
+      "canonical_name": "Metoclopramide",
+      "brand_names": [
+        "Gimoti",
+        "Metozolv",
+        "Pileran",
+        "Reglan"
+      ]
+    },
+    "DB13956": {
+      "canonical_name": "Estradiol valerate",
+      "brand_names": [
+        "Delestrogen"
+      ]
+    },
+    "DB01238": {
+      "canonical_name": "Aripiprazole",
+      "brand_names": [
+        "Abilify",
+        "Opipza"
+      ]
+    },
+    "DB00328": {
+      "canonical_name": "Indomethacin",
+      "brand_names": [
+        "Indocin",
+        "Tivorbex"
+      ]
+    },
+    "DB00252": {
+      "canonical_name": "Phenytoin",
+      "brand_names": [
+        "Dilantin",
+        "Euthaphen",
+        "Euthasol",
+        "Phenytek"
+      ]
+    },
+    "DB00571": {
+      "canonical_name": "Propranolol",
+      "brand_names": [
+        "Hemangeol",
+        "Inderal",
+        "InnoPran"
+      ]
+    },
+    "DB00864": {
+      "canonical_name": "Tacrolimus",
+      "brand_names": [
+        "Astagraf",
+        "Envarsus",
+        "Prograf"
+      ]
+    },
+    "DB00622": {
+      "canonical_name": "Nicardipine",
+      "brand_names": [
+        "Cardene"
+      ]
+    },
+    "DB00297": {
+      "canonical_name": "Bupivacaine",
+      "brand_names": [
+        "Exparel",
+        "Marcaine",
+        "Marcaine with Epinephrine",
+        "Nocita",
+        "Posimir",
+        "Sensorcaine",
+        "Sensorcaine with Epinephrine",
+        "Vivacaine",
+        "Xaracoll",
+        "Zynrelef"
+      ]
+    },
+    "DB06770": {
+      "canonical_name": "Benzyl alcohol",
+      "brand_names": [
+        "Itch-X",
+        "Ivy Dry Super Continuous Spray",
+        "Ivy-Dry Cream",
+        "Shing-Releev",
+        "Ulesfia",
+        "Zilactin Cold Sore",
+        "Zilactin-L Cold Sore Liquid"
+      ]
+    },
+    "DB00193": {
+      "canonical_name": "Tramadol",
+      "brand_names": [
+        "ConZip",
+        "Qdolo",
+        "Seglentis",
+        "Ultracet",
+        "Ultram"
+      ]
+    },
+    "DB09068": {
+      "canonical_name": "Vortioxetine",
+      "brand_names": [
+        "Trintellix"
+      ]
+    },
+    "DB00280": {
+      "canonical_name": "Disopyramide",
+      "brand_names": [
+        "Norpace"
+      ]
+    },
+    "DB00476": {
+      "canonical_name": "Duloxetine",
+      "brand_names": [
+        "Cymbalta",
+        "Drizalma",
+        "Irenka"
+      ]
+    },
+    "DB00555": {
+      "canonical_name": "Lamotrigine",
+      "brand_names": [
+        "Lamictal",
+        "Subvenite"
+      ]
+    },
+    "DB01086": {
+      "canonical_name": "Benzocaine",
+      "brand_names": [
+        "Alpha-caine",
+        "Americaine",
+        "Americaine Hemorrhoidal",
+        "Anacaine",
+        "Anbesol",
+        "Anbesol Cold Sore Therapy",
+        "BOIL-EASE",
+        "Bactimicina Sore Throat",
+        "Bencocaine",
+        "Benz-O-Sthetic",
+        "Benzo-Jel",
+        "Benzodent",
+        "Brace Relief",
+        "Bucalsep",
+        "Candee Caine",
+        "Cepacol",
+        "Cepacol Sore Throat Pain Relief",
+        "Cepacol Sore Throat Plus Cough",
+        "Cepastat Sore Throat & Cough",
+        "Cetacaine",
+        "Chloraseptic",
+        "Chloraseptic Sore Throat",
+        "Chloraseptic Sore Throat + Cough",
+        "Comfort Caine",
+        "Dermawound Benzocaine",
+        "Dermoplast",
+        "Dermoplast Antibacterial",
+        "Dermoplast Pain",
+        "Enemeez Plus",
+        "Finafta Multi Oral",
+        "Fire Out",
+        "Foille",
+        "Freez Eez",
+        "Gelato Anesthetic",
+        "Gingicaine",
+        "Hurricaine",
+        "Kolorz Anesthetic",
+        "Lanacane",
+        "Little Ouchies",
+        "LolliCaine",
+        "Medicaine Sting",
+        "Medicone",
+        "Monistat Care",
+        "Numstat",
+        "OraMagic Plus",
+        "Orabase",
+        "Orajel",
+        "Orasep Reformulated Dec 2013",
+        "Outgro Pain Relief",
+        "Red Cross Canker Sore",
+        "Salinocaine",
+        "Solarcaine Plus Aloe",
+        "Sting-Kill",
+        "StingX",
+        "Tanac Liquid",
+        "Topicale",
+        "Vagisil Original Formula",
+        "Zilactin B"
+      ]
+    },
+    "DB00763": {
+      "canonical_name": "Methimazole",
+      "brand_names": [
+        "Felanorm",
+        "Felimazole",
+        "Reguzol"
+      ]
+    },
+    "DB00398": {
+      "canonical_name": "Sorafenib",
+      "brand_names": [
+        "Nexavar"
+      ]
+    },
+    "DB00795": {
+      "canonical_name": "Sulfasalazine",
+      "brand_names": [
+        "Azulfidine"
+      ]
+    },
+    "DB00999": {
+      "canonical_name": "Hydrochlorothiazide",
+      "brand_names": [
+        "Accuretic",
+        "Atacand HCT",
+        "Avalide",
+        "Benicar HCT",
+        "Diovan HCT",
+        "Dyazide",
+        "Exforge HCT",
+        "Hyzaar",
+        "Inzirqo",
+        "Lopressor HCT",
+        "Lotensin HCT",
+        "Maxzide",
+        "Micardis-HCT",
+        "Tekturna HCT",
+        "Tribenzor",
+        "Vaseretic",
+        "Zestoretic",
+        "Ziac"
+      ]
+    },
+    "DB00472": {
+      "canonical_name": "Fluoxetine",
+      "brand_names": [
+        "Prozac",
+        "RECONCILE",
+        "Symbyax"
+      ]
+    },
+    "DB01174": {
+      "canonical_name": "Phenobarbital",
+      "brand_names": [
+        "Donnatal",
+        "Fidoquel",
+        "Phenohytro",
+        "Sezaby"
+      ]
+    },
+    "DB09185": {
+      "canonical_name": "Viloxazine",
+      "brand_names": [
+        "Qelbree"
+      ]
+    },
+    "DB00285": {
+      "canonical_name": "Venlafaxine",
+      "brand_names": [
+        "Effexor"
+      ]
+    },
+    "DB01367": {
+      "canonical_name": "Rasagiline",
+      "brand_names": [
+        "Azilect"
+      ]
+    },
+    "DB00907": {
+      "canonical_name": "Cocaine",
+      "brand_names": [
+        "Goprelto",
+        "Numbrino"
+      ]
+    },
+    "DB00373": {
+      "canonical_name": "Timolol",
+      "brand_names": [
+        "Betimol",
+        "Combigan",
+        "Cosopt",
+        "Istalol",
+        "Timoptic"
+      ]
+    },
+    "DB00482": {
+      "canonical_name": "Celecoxib",
+      "brand_names": [
+        "Celebrex",
+        "Consensi",
+        "Elyxyb",
+        "Seglentis",
+        "Vyscoxa"
+      ]
+    },
+    "DB01015": {
+      "canonical_name": "Sulfamethoxazole",
+      "brand_names": [
+        "Bactrim",
+        "Sulfatrim"
+      ]
+    },
+    "DB01115": {
+      "canonical_name": "Nifedipine",
+      "brand_names": [
+        "Afeditab CR",
+        "Procardia"
+      ]
+    },
+    "DB00537": {
+      "canonical_name": "Ciprofloxacin",
+      "brand_names": [
+        "Cetraxal",
+        "Ciloxan",
+        "Cipro",
+        "Cipro HC",
+        "Ciprodex",
+        "Otovel",
+        "Proquin"
+      ]
+    },
+    "DB00575": {
+      "canonical_name": "Clonidine",
+      "brand_names": [
+        "Catapres",
+        "Duraclon",
+        "Javadin",
+        "Kapvay",
+        "Nexiclon",
+        "Onyda"
+      ]
+    },
+    "DB08904": {
+      "canonical_name": "Certolizumab pegol",
+      "brand_names": [
+        "Cimzia"
+      ]
+    },
+    "DB00334": {
+      "canonical_name": "Olanzapine",
+      "brand_names": [
+        "Lybalvi",
+        "Symbyax",
+        "Zyprexa"
+      ]
+    },
+    "DB00794": {
+      "canonical_name": "Primidone",
+      "brand_names": [
+        "Mysoline"
+      ]
+    },
+    "DB00490": {
+      "canonical_name": "Buspirone",
+      "brand_names": [
+        "Bucapsol",
+        "Buspar"
+      ]
+    },
+    "DB00598": {
+      "canonical_name": "Labetalol",
+      "brand_names": [
+        "Trandate"
+      ]
+    },
+    "DB00586": {
+      "canonical_name": "Diclofenac",
+      "brand_names": [
+        "Aleve Arthritis Pain",
+        "Arthrotec",
+        "Cambia",
+        "Cataflam",
+        "Flector",
+        "Licart",
+        "Lofena",
+        "Pennsaid",
+        "Surpass Anti-Inflammatory",
+        "Trifena",
+        "Voltaren",
+        "Xiclo",
+        "Zipsor",
+        "Zorvolex"
+      ]
+    },
+    "DB01221": {
+      "canonical_name": "Ketamine",
+      "brand_names": [
+        "Ketalar",
+        "Ketaset",
+        "Zetamine"
+      ]
+    },
+    "DB01072": {
+      "canonical_name": "Atazanavir",
+      "brand_names": [
+        "Evotaz",
+        "Reyataz"
+      ]
+    },
+    "DB00813": {
+      "canonical_name": "Fentanyl",
+      "brand_names": [
+        "Abstral",
+        "Actiq",
+        "Fentora",
+        "Ionsys",
+        "Subsys"
+      ]
+    },
+    "DB00343": {
+      "canonical_name": "Diltiazem",
+      "brand_names": [
+        "Cardizem",
+        "Cartia",
+        "Dilt",
+        "Diltzac",
+        "Matzim",
+        "Taztia",
+        "Tiadylt",
+        "Tiazac"
+      ]
+    },
+    "DB00349": {
+      "canonical_name": "Clobazam",
+      "brand_names": [
+        "Onfi",
+        "Sympazan"
+      ]
+    },
+    "DB01601": {
+      "canonical_name": "Lopinavir",
+      "brand_names": [
+        "Kaletra"
+      ]
+    },
+    "DB09082": {
+      "canonical_name": "Vilanterol",
+      "brand_names": [
+        "Anoro",
+        "Breo",
+        "Trelegy"
+      ]
+    },
+    "DB00454": {
+      "canonical_name": "Meperidine",
+      "brand_names": [
+        "Demerol"
+      ]
+    },
+    "DB01037": {
+      "canonical_name": "Selegiline",
+      "brand_names": [
+        "Anipryl",
+        "Emsam",
+        "Zelapar"
+      ]
+    },
+    "DB00808": {
+      "canonical_name": "Indapamide",
+      "brand_names": [
+        "Widaplik"
+      ]
+    },
+    "DB09061": {
+      "canonical_name": "Cannabidiol",
+      "brand_names": [
+        "Epidiolex"
+      ]
+    },
+    "DB00715": {
+      "canonical_name": "Paroxetine",
+      "brand_names": [
+        "Brisdelle",
+        "Paxil"
+      ]
+    },
+    "DB00683": {
+      "canonical_name": "Midazolam",
+      "brand_names": [
+        "Nayzilam"
+      ]
+    },
+    "DB00588": {
+      "canonical_name": "Fluticasone propionate",
+      "brand_names": [
+        "Advair",
+        "AirDuo",
+        "Aller-Flo",
+        "Armonair",
+        "Beser",
+        "Clarispray",
+        "Cutivate",
+        "Dymista",
+        "Flonase",
+        "Flovent",
+        "Fluticare",
+        "Nasopro 24",
+        "Wixela",
+        "Xhance"
+      ]
+    },
+    "DB14185": {
+      "canonical_name": "Aripiprazole lauroxil",
+      "brand_names": [
+        "Aristada"
+      ]
+    },
+    "DB00230": {
+      "canonical_name": "Pregabalin",
+      "brand_names": [
+        "Bonqat",
+        "Lyrica"
+      ]
+    },
+    "DB00633": {
+      "canonical_name": "Dexmedetomidine",
+      "brand_names": [
+        "Dexased",
+        "Dexdomitor",
+        "Dexmedesed",
+        "Dexmedvet",
+        "Igalmi",
+        "Precedex",
+        "Sedexodine",
+        "Sileo"
+      ]
+    },
+    "DB00788": {
+      "canonical_name": "Naproxen",
+      "brand_names": [
+        "Aleve",
+        "Aleve PM",
+        "Anaprox",
+        "Naprelan",
+        "Naprosyn",
+        "Treximet",
+        "Vimovo",
+        "Wal-Proxen"
+      ]
+    },
+    "DB01041": {
+      "canonical_name": "Thalidomide",
+      "brand_names": [
+        "Thalomid"
+      ]
+    },
+    "DB00527": {
+      "canonical_name": "Cinchocaine",
+      "brand_names": [
+        "Nupercainal"
+      ]
+    },
+    "DB01320": {
+      "canonical_name": "Fosphenytoin",
+      "brand_names": [
+        "Cerebyx"
+      ]
+    },
+    "DB00829": {
+      "canonical_name": "Diazepam",
+      "brand_names": [
+        "Diastat",
+        "Libervant",
+        "Valium",
+        "Valtoco"
+      ]
+    },
+    "DB01169": {
+      "canonical_name": "Arsenic trioxide",
+      "brand_names": [
+        "Trisenox"
+      ]
+    },
+    "DB00563": {
+      "canonical_name": "Methotrexate",
+      "brand_names": [
+        "Jylamvo",
+        "Otrexup",
+        "Rasuvo",
+        "Reditrex",
+        "Trexall",
+        "Xatmep"
+      ]
+    },
+    "DB00669": {
+      "canonical_name": "Sumatriptan",
+      "brand_names": [
+        "Imitrex",
+        "Onzetra",
+        "Tosymra",
+        "Treximet",
+        "Zembrace"
+      ]
+    },
+    "DB01161": {
+      "canonical_name": "Chloroprocaine",
+      "brand_names": [
+        "Clorotekal",
+        "Iheezo",
+        "Nesacaine"
+      ]
+    },
+    "DB11642": {
+      "canonical_name": "Pitolisant",
+      "brand_names": [
+        "Wakix"
+      ]
+    },
+    "DB09071": {
+      "canonical_name": "Tasimelteon",
+      "brand_names": [
+        "Hetlioz"
+      ]
+    },
+    "DB01018": {
+      "canonical_name": "Guanfacine",
+      "brand_names": [
+        "Intuniv"
+      ]
+    },
+    "DB00656": {
+      "canonical_name": "Trazodone",
+      "brand_names": [
+        "Raldesy"
+      ]
+    },
+    "DB00780": {
+      "canonical_name": "Phenelzine",
+      "brand_names": [
+        "Nardil"
+      ]
+    },
+    "DB00286": {
+      "canonical_name": "Conjugated estrogens",
+      "brand_names": [
+        "Duavee",
+        "Premarin"
+      ]
+    },
+    "DB00734": {
+      "canonical_name": "Risperidone",
+      "brand_names": [
+        "Perseris",
+        "Risperdal",
+        "Rykindo",
+        "Uzedy"
+      ]
+    },
+    "DB04920": {
+      "canonical_name": "Clevidipine",
+      "brand_names": [
+        "Cleviprex"
+      ]
+    },
+    "DB01274": {
+      "canonical_name": "Arformoterol",
+      "brand_names": [
+        "Brovana"
+      ]
+    },
+    "DB01181": {
+      "canonical_name": "Ifosfamide",
+      "brand_names": [
+        "Ifex"
+      ]
+    },
+    "DB00696": {
+      "canonical_name": "Ergotamine",
+      "brand_names": [
+        "Cafergot",
+        "Ergomar",
+        "Migergot"
+      ]
+    },
+    "DB00612": {
+      "canonical_name": "Bisoprolol",
+      "brand_names": [
+        "Ziac"
+      ]
+    },
+    "DB01136": {
+      "canonical_name": "Carvedilol",
+      "brand_names": [
+        "Coreg"
+      ]
+    },
+    "DB08893": {
+      "canonical_name": "Mirabegron",
+      "brand_names": [
+        "Myrbetriq"
+      ]
+    },
+    "DB00818": {
+      "canonical_name": "Propofol",
+      "brand_names": [
+        "Diprivan",
+        "Propoflo",
+        "Propovan",
+        "Propoven"
+      ]
+    },
+    "DB01234": {
+      "canonical_name": "Dexamethasone",
+      "brand_names": [
+        "Ciprodex",
+        "Decadron",
+        "Dexasone",
+        "Dexium",
+        "Dexlyt",
+        "Dextenza",
+        "Dexycu",
+        "Hemady",
+        "Maxidex",
+        "Maxitrol",
+        "Ozurdex",
+        "Poly-Dex",
+        "Tobradex",
+        "Tresaderm"
+      ]
+    },
+    "DB01175": {
+      "canonical_name": "Escitalopram",
+      "brand_names": [
+        "Lexapro"
+      ]
+    },
+    "DB06216": {
+      "canonical_name": "Asenapine",
+      "brand_names": [
+        "Saphris",
+        "Secuado"
+      ]
+    },
+    "DB04946": {
+      "canonical_name": "Iloperidone",
+      "brand_names": [
+        "Fanapt"
+      ]
+    },
+    "DB01200": {
+      "canonical_name": "Bromocriptine",
+      "brand_names": [
+        "Cycloset",
+        "Parlodel"
+      ]
+    },
+    "DB00625": {
+      "canonical_name": "Efavirenz",
+      "brand_names": [
+        "Atripla",
+        "Symfi"
+      ]
+    },
+    "DB00264": {
+      "canonical_name": "Metoprolol",
+      "brand_names": [
+        "Kapspargo",
+        "Lopressor",
+        "Lopressor HCT",
+        "Toprol"
+      ]
+    },
+    "DB00738": {
+      "canonical_name": "Pentamidine",
+      "brand_names": [
+        "NebuPent",
+        "Pentam"
+      ]
+    },
+    "DB01222": {
+      "canonical_name": "Budesonide",
+      "brand_names": [
+        "Airsupra",
+        "Breyna",
+        "Breztri",
+        "Entocort",
+        "Eohilia",
+        "Ortikos",
+        "Pulmicort",
+        "Rhinocort",
+        "Symbicort",
+        "Tarpeyo",
+        "Uceris"
+      ]
+    },
+    "DB00812": {
+      "canonical_name": "Phenylbutazone",
+      "brand_names": [
+        "Equi-Phar",
+        "Equizone",
+        "Pributazone",
+        "Vetribute"
+      ]
+    },
+    "DB09009": {
+      "canonical_name": "Articaine",
+      "brand_names": [
+        "Articadent",
+        "Orabloc",
+        "Septocaine",
+        "Ultacan",
+        "Zorcaine"
+      ]
+    },
+    "DB01036": {
+      "canonical_name": "Tolterodine",
+      "brand_names": [
+        "Detrol"
+      ]
+    },
+    "DB01203": {
+      "canonical_name": "Nadolol",
+      "brand_names": [
+        "Corgard"
+      ]
+    },
+    "DB04868": {
+      "canonical_name": "Nilotinib",
+      "brand_names": [
+        "Cavhanza",
+        "Danziten",
+        "Tasigna"
+      ]
+    },
+    "DB00461": {
+      "canonical_name": "Nabumetone",
+      "brand_names": [
+        "Relafen"
+      ]
+    },
+    "DB00215": {
+      "canonical_name": "Citalopram",
+      "brand_names": [
+        "Celexa"
+      ]
+    },
+    "DB04855": {
+      "canonical_name": "Dronedarone",
+      "brand_names": [
+        "Multaq"
+      ]
+    },
+    "DB00182": {
+      "canonical_name": "Amphetamine",
+      "brand_names": [
+        "Adderall",
+        "Adzenys",
+        "Dyanavel",
+        "Evekeo",
+        "Mydayis"
+      ]
+    },
+    "DB00936": {
+      "canonical_name": "Salicylic acid",
+      "brand_names": [
+        "AcneWorx",
+        "Acneclir",
+        "Acnevir",
+        "Ala Seb T",
+        "Azo Urinary Tract Defense",
+        "Bensal",
+        "Broda Acne Spa",
+        "Clear Proof Acne Medication",
+        "Clearskin Blemish",
+        "Clearskin Pore Penetrating Black Mineral Mask",
+        "Clearskin Professional Daily Correcting",
+        "Clenziderm",
+        "Compound W brand of salicylic acid",
+        "Cornstick",
+        "Cystex",
+        "DHS Salicylic Acid 3%",
+        "Denorex Extra Strength Reformulated Aug 2012",
+        "DermalZone",
+        "Dermoneen",
+        "Differin Acne Clearing",
+        "Dream Pure BB",
+        "Duofilm",
+        "Duoplant",
+        "Everclean",
+        "Exoderm",
+        "Fostex Bar",
+        "Freezone",
+        "Glycylic",
+        "Gordofilm",
+        "Inova 8-2",
+        "Ionil Plus",
+        "Keralyt",
+        "Keralyt 5",
+        "Kleer Plex",
+        "MG217 Psoriasis Salicylic Acid",
+        "Mediplast",
+        "Mosco Corn & Callus Remover",
+        "Mosco One Step Corn Remover",
+        "Nizoral Psoriasis",
+        "Noxzema Clean",
+        "Oxy Deep Pore",
+        "P & S",
+        "Pernox Scrub Cleanser",
+        "Phisoderm Clear Confidence Body Wash",
+        "Phisoderm Clear Confidence Daily Gel Face Wash",
+        "Propa P.H.",
+        "Propa P.H. Acne Mask",
+        "Psoriasin Wash",
+        "Rayasal",
+        "Rogaine Anti-Dandruff",
+        "Sal-Plant Gel",
+        "Salinocaine",
+        "Salvax",
+        "Salycim",
+        "Salyntra",
+        "Scalpicin Scalp Relief",
+        "Sebasorb",
+        "Sebex",
+        "Sebobalance",
+        "Sebulex",
+        "Selsun Blue Naturals",
+        "Skinmedica Purifying Foaming Wash",
+        "St. Ives Blemish & Blackhead Control",
+        "Stri-Dex",
+        "Stri-Dex Clear Gel",
+        "Stridex",
+        "Super Spot Remover",
+        "Ultrasal",
+        "Verruguin",
+        "Verrustat",
+        "Versiclear",
+        "Virasal",
+        "WARTICIDE",
+        "Wartstick",
+        "X-Seb T Pearl",
+        "Xalix",
+        "Zapzyt Acne Wash",
+        "Zit Stick",
+        "clear days ahead"
+      ]
+    },
+    "DB00401": {
+      "canonical_name": "Nisoldipine",
+      "brand_names": [
+        "Sular"
+      ]
+    },
+    "DB00554": {
+      "canonical_name": "Piroxicam",
+      "brand_names": [
+        "Feldene"
+      ]
+    },
+    "DB00356": {
+      "canonical_name": "Chlorzoxazone",
+      "brand_names": [
+        "Lorzone"
+      ]
+    },
+    "DB00880": {
+      "canonical_name": "Chlorothiazide",
+      "brand_names": [
+        "Diuril"
+      ]
+    },
+    "DB00980": {
+      "canonical_name": "Ramelteon",
+      "brand_names": [
+        "Rozerem"
+      ]
+    },
+    "DB00370": {
+      "canonical_name": "Mirtazapine",
+      "brand_names": [
+        "Mirataz",
+        "Remeron"
+      ]
+    },
+    "DB08877": {
+      "canonical_name": "Ruxolitinib",
+      "brand_names": [
+        "Jakafi",
+        "Opzelura"
+      ]
+    },
+    "DB05541": {
+      "canonical_name": "Brivaracetam",
+      "brand_names": [
+        "Briviact"
+      ]
+    }
+  }
+}

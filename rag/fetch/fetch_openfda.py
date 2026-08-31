@@ -4,8 +4,14 @@
     python rag/fetch/fetch_openfda.py --insecure --top-n 500      # wider net
     python rag/fetch/fetch_openfda.py --insecure --drugs warfarin,aspirin
 
-openFDA (api.fda.gov) is free, public, no API key required for this volume
-(default limit: 40 req/min, 1000/day -- well above what this script uses).
+openFDA (api.fda.gov) is free, public. Unauthenticated: 40 req/min, 1,000/
+day. With a free key (open.fda.gov/apis/authentication, instant signup):
+240 req/min, 120,000/day -- set it as an environment variable, never as a
+literal in this file or any committed config:
+
+    export OPENFDA_API_KEY=your-key-here     # bash
+    $env:OPENFDA_API_KEY = "your-key-here"   # PowerShell
+
 It re-serves the FDA's own structured product labels, which include a
 dedicated `drug_interactions` section: exactly the "what to do about it"
 clinical text the graph (rag/graph.py) cannot produce, since it only
@@ -89,11 +95,14 @@ def top_drugs_by_graph_degree(n):
     return [name_by_id[did] for did, _ in counts.most_common(n) if did in name_by_id]
 
 
-def fetch_label(generic_name, insecure):
+def fetch_label(generic_name, insecure, api_key=None):
     url = (
         "https://api.fda.gov/drug/label.json"
         f"?search=openfda.generic_name:%22{generic_name}%22&limit=1"
     )
+    if api_key:
+        url += f"&api_key={api_key}"
+
     resp = get(url, insecure=insecure)
 
     if resp.status_code != 200:
@@ -140,6 +149,10 @@ def main():
                          help="skip TLS certificate verification (see rag/fetch/_http.py)")
     args = parser.parse_args()
 
+    api_key = os.environ.get("OPENFDA_API_KEY")
+    delay = 0.05 if api_key else 0.3
+    print(f"Using {'authenticated (240 req/min)' if api_key else 'unauthenticated (40 req/min)'} openFDA access")
+
     if args.drugs:
         drugs = [d.strip() for d in args.drugs.split(",")]
     else:
@@ -158,7 +171,7 @@ def main():
     for name in drugs:
         name = name.strip()
         try:
-            label = fetch_label(name, args.insecure)
+            label = fetch_label(name, args.insecure, api_key=api_key)
         except Exception as e:
             print(f"  {name}: ERROR ({type(e).__name__})")
             missing.append(name)
@@ -183,7 +196,7 @@ def main():
         print(f"  {name}: saved ({len(md):,} chars) -> {os.path.relpath(out_path)}")
         ok.append(name)
 
-        time.sleep(0.3)  # be polite; miles under the rate limit regardless
+        time.sleep(delay)
 
     print(f"\n{len(ok)}/{len(drugs)} labels saved to {os.path.relpath(OUT_DIR)}")
     if missing:

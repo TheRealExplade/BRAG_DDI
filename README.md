@@ -278,10 +278,13 @@ python rag/ingest.py                       # curated corpus + data/corpus/*
 python rag/ingest.py --include-drug-text   # + your own DrugBank narrative text (~23k more chunks, free, no download)
 ```
 
-**Already fetched, already in the corpus** (168 drugs' worth):
+**Already fetched, already in the corpus** (370 drugs' worth):
 ```bash
-python rag/fetch/fetch_openfda.py --insecure                # 14 seed + top-200-by-interaction-degree
-python rag/fetch/fetch_openfda.py --insecure --top-n 500     # wider net
+python rag/fetch/fetch_openfda.py --insecure                # seed + top-200-by-interaction-degree
+python rag/fetch/fetch_openfda.py --insecure --top-n 600     # wider net (diminishing returns past ~400 --
+                                                              #  many high-interaction-degree drugs in
+                                                              #  DrugBank are withdrawn/historical/foreign-
+                                                              #  market and never had a US FDA label)
 python rag/fetch/fetch_openfda.py --insecure --drugs warfarin,aspirin
 ```
 `--top-n` picks drugs by how many other drugs they interact with in the
@@ -293,13 +296,38 @@ verification; only needed in sandboxed/corporate-proxy environments where
 the local trust store can't reach revocation-check endpoints — try
 without it first.
 
-**Free sources still worth pulling, in priority order:**
+**openFDA API key** (free, register at open.fda.gov/apis/authentication,
+instant, no approval wait) raises the rate limit from 40 req/min & 1,000/
+day to 240 req/min & 120,000/day:
+```bash
+export OPENFDA_API_KEY=your-key-here     # bash
+$env:OPENFDA_API_KEY = "your-key-here"   # PowerShell
+```
+Never commit the key itself — `fetch_openfda.py` only reads it from this
+environment variable, nowhere else.
+
+**Also already fetched** — two RxNorm/RxClass (NLM, free, no key)
+datasets, distinct from the enzyme/transporter gap in §9:
+
+```bash
+python rag/fetch/fetch_rxclass.py --insecure          # ATC drug classes -> data/rxclass_atc.json
+python rag/fetch/fetch_rxnorm_aliases.py --insecure   # brand-name synonyms -> data/rxnorm_aliases.json
+```
+- **RxClass**: ATC classification (`warfarin -> B01AA Vitamin K
+  antagonists`), merged into every mechanism report as context. Not
+  currently used for interaction reasoning — foundation for future
+  class-level generalization.
+- **RxNorm brand names**: merged directly into the name→drug_id lookup
+  table (`rag/graph.py::build_name_lookup`), so brand names resolve like
+  any other name. This is a different, bigger list than the 7 hand-typed
+  entries in `COMMON_ALIASES` — e.g. it caught "Jantoven" (a real warfarin
+  brand name) that the hand-typed list had missed.
+
+**Free sources still worth pulling:**
 
 | Source | Access | Notes |
 |---|---|---|
 | **Your own `drugs.json` narrative text** | Already have it | `--include-drug-text` above — zero cost, do this first |
-| **openFDA, wider coverage** | Free API; **register a free key** at open.fda.gov/apis/authentication for 240 req/min & 120k/day (vs. 40/min & 1,000/day unauthenticated) | Instant signup, no approval wait — this is the cheapest way to go from 168 drugs to thousands |
-| **RxClass (NLM/RxNav)** | Free, no key | ATC drug-classification codes (e.g. `warfarin -> B01AA Vitamin K antagonists`) — enables *class-level* reasoning later ("any strong CYP3A4 inhibitor") instead of needing every drug enumerated individually |
 | **PubMed Central OA subset** | Free bulk/FTP | Full-text interaction studies — richer than labels, more effort to integrate |
 | **LiverTox (NIH)** | Free | Hepatotoxicity-specific monographs; needs a search step first, not a direct fetch |
 | DailyMed (NIH) | Free | Same underlying FDA label content as openFDA — skip, redundant |
@@ -308,7 +336,9 @@ Avoid UpToDate / Lexicomp / Micromedex — licensed, not scrapeable.
 **Flockhart Table and PharmGKB/ClinPGx are both JavaScript-rendered
 single-page apps with no static HTML to scrape** — confirmed inaccessible
 to a plain HTTP fetch; would need real browser automation against a site
-not designed for scripted access.
+not designed for scripted access. **No free source found** for
+pharmacogenomic (gene-variant → drug response) data or lab/therapeutic
+monitoring ranges (e.g. INR targets) — these remain open gaps.
 
 ### Severity — already done
 
