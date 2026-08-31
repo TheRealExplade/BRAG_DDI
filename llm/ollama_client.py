@@ -1,8 +1,10 @@
 import requests
 
-class OllamaLLM:
+from llm.interface import LLMInterface
 
-    def __init__(self, model="phi3"):
+class OllamaLLM(LLMInterface):
+
+    def __init__(self, model="mistral"):
         self.model = model
         self.url = "http://localhost:11434/api/generate"
 
@@ -14,7 +16,16 @@ class OllamaLLM:
             "stream": False,
             "options": {
                 "temperature": 0,
-                "num_predict": 300
+                "num_predict": 300,
+                # Ollama defaults to a 2048-token context window when this
+                # isn't set, which the prompt template's own instructions +
+                # example already eat into (~500-600 tokens) before any
+                # dynamic evidence is added. Set explicitly so a longer
+                # mechanism report (PK reasoning can run 1000+ chars per
+                # drug pair) doesn't silently get truncated by Ollama
+                # itself -- which drops from context, not something we
+                # control or see happen.
+                "num_ctx": 4096
             }
         }
 

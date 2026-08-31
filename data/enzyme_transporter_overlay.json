@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "purpose": "Adds enzyme + transporter data (with actions) on top of rag/processed/drugs.json, which ships with 0% coverage for both fields.",
+    "why_an_overlay": "rag/processed/ is gitignored and has no generator script in this repo, so it cannot be regenerated. This file lives in data/ so it IS version-controlled, and is merged onto drugs.json at load time by rag/graph.py::load_drugs().",
+    "schema": {
+      "drugs": {
+        "<drugbank_id>": {
+          "name": "human-readable name, for sanity checking only",
+          "enzymes": [{"name": "CYP2C9", "actions": ["substrate|inhibitor|inducer"]}],
+          "transporters": [{"name": "ABCB1", "actions": ["substrate|inhibitor|inducer"]}]
+        }
+      }
+    },
+    "source": "HAND-CURATED DEMO SEED -- textbook pharmacology only, NOT a DrugBank export.",
+    "WARNING": "This seed exists so the mechanistic-inference code path can be exercised and tested. It covers ~13 drugs. It is NOT a clinical dataset and MUST be replaced by a real DrugBank/PharmGKB export before any clinical use. Provenance is propagated into the mechanism report so the LLM and the pharmacist can see it.",
+    "replace_with": "DrugBank full XML release (academic licence) -- its <enzymes>/<transporters> elements carry exactly these action arrays and join on the drug_id already used here."
+  },
+
+  "drugs": {
+    "DB00682": {
+      "name": "Warfarin",
+      "enzymes": [
+        {"name": "CYP2C9", "actions": ["substrate"]},
+        {"name": "CYP3A4", "actions": ["substrate"]},
+        {"name": "CYP1A2", "actions": ["substrate"]},
+        {"name": "CYP2C19", "actions": ["substrate"]}
+      ],
+      "transporters": []
+    },
+
+    "DB00196": {
+      "name": "Fluconazole",
+      "enzymes": [
+        {"name": "CYP2C9", "actions": ["inhibitor"]},
+        {"name": "CYP2C19", "actions": ["inhibitor"]},
+        {"name": "CYP3A4", "actions": ["inhibitor"]}
+      ],
+      "transporters": []
+    },
+
+    "DB01045": {
+      "name": "Rifampin",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["inducer"]},
+        {"name": "CYP2C9", "actions": ["inducer"]},
+        {"name": "CYP2C19", "actions": ["inducer"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["inducer"]}
+      ]
+    },
+
+    "DB00641": {
+      "name": "Simvastatin",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["substrate"]}
+      ],
+      "transporters": []
+    },
+
+    "DB01076": {
+      "name": "Atorvastatin",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["substrate"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["substrate"]}
+      ]
+    },
+
+    "DB01026": {
+      "name": "Ketoconazole",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["inhibitor"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["inhibitor"]}
+      ]
+    },
+
+    "DB01211": {
+      "name": "Clarithromycin",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["substrate", "inhibitor"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["inhibitor"]}
+      ]
+    },
+
+    "DB00390": {
+      "name": "Digoxin",
+      "enzymes": [],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["substrate"]}
+      ]
+    },
+
+    "DB00908": {
+      "name": "Quinidine",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["substrate"]},
+        {"name": "CYP2D6", "actions": ["inhibitor"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["inhibitor"]}
+      ]
+    },
+
+    "DB01118": {
+      "name": "Amiodarone",
+      "enzymes": [
+        {"name": "CYP3A4", "actions": ["substrate", "inhibitor"]},
+        {"name": "CYP2C9", "actions": ["inhibitor"]},
+        {"name": "CYP2D6", "actions": ["inhibitor"]}
+      ],
+      "transporters": [
+        {"name": "ABCB1", "actions": ["inhibitor"]}
+      ]
+    },
+
+    "DB00338": {
+      "name": "Omeprazole",
+      "enzymes": [
+        {"name": "CYP2C19", "actions": ["substrate", "inhibitor"]},
+        {"name": "CYP3A4", "actions": ["substrate"]}
+      ],
+      "transporters": []
+    },
+
+    "DB00758": {
+      "name": "Clopidogrel",
+      "enzymes": [
+        {"name": "CYP2C19", "actions": ["substrate"]},
+        {"name": "CYP3A4", "actions": ["substrate"]}
+      ],
+      "transporters": []
+    },
+
+    "DB01050": {
+      "name": "Ibuprofen",
+      "enzymes": [
+        {"name": "CYP2C9", "actions": ["substrate"]}
+      ],
+      "transporters": []
+    }
+  }
+}

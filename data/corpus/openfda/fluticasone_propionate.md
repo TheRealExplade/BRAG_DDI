@@ -1,0 +1,5 @@
+# Fluticasone Propionate -- FDA label excerpts
+
+_Source: openFDA (api.fda.gov), U.S. FDA structured product label._
+
+Dosage And Administration: Directions read the Quick Start Guide for how to: prime the bottle use the spray clean the spray nozzle shake gently before each use use this product only once a day do not use more than directed ADULTS AND CHILDREN 12 YEARS OF AGE AND OLDER Week 1- use 2 sprays in each nostril once daily Week 2 through 6 months- use 1 or 2 sprays in each nostril once daily, as needed to treat your symptoms After 6 months of daily use – ask your doctor if you can keep using CHILDREN 4 TO 11 YEARS OF AGE the growth rate of some children may be slower while using this product. Children should use for the shortest amount of time necessary to achieve symptom relief. Talk to your child’s doctor if your child needs to use the spray for longer than two months a year. an adult should supervise use use 1 spray in each nostril once daily CHILDREN UNDER 4 YEARS OF AGE do not use

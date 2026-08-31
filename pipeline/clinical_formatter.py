@@ -33,7 +33,7 @@ def format_for_pharmacist(data, patient_context):
         clinical_effects = [clinical_effects]
 
     return f"""
-🔹 DRUG INTERACTION REPORT
+=== DRUG INTERACTION REPORT ===
 
 Drugs:
 - Drug A: {data.get("drug_pair", ["N/A", "N/A"])[0]}
@@ -41,7 +41,7 @@ Drugs:
 
 DDI Prediction:
 - Severity: {data.get("clinical_severity", "UNKNOWN")}
-- Confidence: {data.get("confidence_score", "N/A")}
+- Confidence: {data.get("confidence_score", "N/A")} ({data.get("confidence_level", "N/A")})
 
 Clinical Summary:
 - {data.get("interaction_summary", "Not available")}
@@ -69,6 +69,6 @@ Graph Evidence:
 {data.get("graph_evidence", "N/A")}
 
 AI Confidence:
-- {data.get("confidence_score", "N/A")}
+- {data.get("confidence_score", "N/A")} ({data.get("confidence_level", "N/A")})
 - Reason: {data.get("confidence_reason", "Not specified")}
 """

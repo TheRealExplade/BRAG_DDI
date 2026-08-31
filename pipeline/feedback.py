@@ -11,6 +11,8 @@ def save_feedback(llm_output, feedback):
 
     file_path = "data/feedback_store.json"
 
+    data = []
+
     if os.path.exists(file_path):
         try:
             with open(file_path, "r") as f:
@@ -20,10 +22,11 @@ def save_feedback(llm_output, feedback):
             if isinstance(data, dict):
                 data = [data]
 
-        except:
+        except (json.JSONDecodeError, OSError) as e:
+            backup_path = file_path + ".corrupt"
+            os.replace(file_path, backup_path)
+            print(f"WARNING: feedback store was unreadable ({e}); backed up to {backup_path}")
             data = []
-    else:
-        data = []
 
     data.append(record)
 

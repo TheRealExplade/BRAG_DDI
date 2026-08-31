@@ -1,10 +1,16 @@
 # ddi/mock_ddi.py
 
+from ddi.mock_ddi_config import (
+    DEFAULT_SEVERITY,
+    DEFAULT_MECHANISM,
+    DEFAULT_CONFIDENCE,
+)
+
 def get_ddi(drug1, drug2):
     return {
         "drug1": drug1,
         "drug2": drug2,
-        "severity": "HIGH",
-        "mechanism": "CYP3A4 inhibition leading to increased plasma levels",
-        "confidence": 0.82
+        "severity": DEFAULT_SEVERITY,
+        "mechanism": DEFAULT_MECHANISM,
+        "confidence": DEFAULT_CONFIDENCE
     }

@@ -1,2 +1,16 @@
 # Graph RAG generated files
 rag/processed/
+
+# Generated vector DB (rebuild via `python rag/ingest.py`)
+chroma_db/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Generated graph visualisation
+graph.html
+
+# DDInter severity data (44MB) -- regenerate with:
+#   python rag/fetch/fetch_ddinter.py --insecure
+data/ddinter/

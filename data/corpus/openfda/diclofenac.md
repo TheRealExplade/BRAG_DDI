@@ -1,0 +1,5 @@
+# Diclofenac -- FDA label excerpts
+
+_Source: openFDA (api.fda.gov), U.S. FDA structured product label._
+
+Dosage And Administration: Directions Use up to 21 days unless directed by your doctor Not for strains, sprains, bruises or sports injuries. This product has not been shown to work for these types of injuries. Daily Per Dose For your arthritis pain: Use 4 times per day every day Do not use on more than 2 body areas at the same time Use ENCLOSED DOSING CARD to measure a dose For each upper body area (hand, wrist, or elbow) – Squeeze out 2.25 inches (2 grams) For each lower body area (foot, ankle or knee) –Squeeze out 4.5 inches (4 grams) Read the enclosed User Guide for complete instructions: use only as directed do not use more than directed or for longer than directed apply only to clean, dry skin that does not have any cuts, open wounds, infections or rashes do not apply in same area as any other product do not apply with external heat such as heating pad do not apply a bandage over the treated area store ENCLOSED DOSING CARD with your Diclofenac Sodium Topical Gel, 1% product. The dosing card is re-usable.

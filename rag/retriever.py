@@ -1,15 +1,20 @@
+from functools import lru_cache
+
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
-import streamlit as st
 
-@st.cache_resource
+from rag.ingest import EMBEDDING_MODEL, PERSIST_DIR
+
+@lru_cache(maxsize=1)
 def get_retriever():
+    # Must use the same embedding model as ingest.py -- a mismatch silently
+    # produces garbage similarity scores rather than an error.
     embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+        model_name=EMBEDDING_MODEL
     )
 
     db = Chroma(
-        persist_directory="./chroma_db",
+        persist_directory=PERSIST_DIR,
         embedding_function=embeddings
     )
 
